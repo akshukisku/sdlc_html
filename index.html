@@ -1,17 +1,979 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./input/style.css">
+    <title>Agri Vision | Smart Plant Care</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
-<body>
-    <section class="h-screen bg-red-300 w-full">
-        <div></div>
+
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full bg-white/90 backdrop-blur-md sticky top-0 z-50 py-4 px-6 lg:px-16 border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 w-21">
+                <img src="./images/navlogo.png" alt="">
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+                <a href="index.html" target="_blank" class="text-emerald-600 hover:text-emerald-700 transition">Home</a>
+                <a href="#about" class="hover:text-emerald-600 transition">About Us</a>
+                <a href="#diseases" class="hover:text-emerald-600 transition">Diseases</a>
+                <a href="#crops" class="hover:text-emerald-600 transition">Crops</a>
+                <a href="#works" class="hover:text-emerald-600 transition">How It Works</a>
+                <a href="#articles" class="hover:text-emerald-600 transition">Articles</a>
+            </div>
+
+            <!-- Contact Button -->
+            <a href="#contact"
+                class="hidden sm:flex items-center gap-3 bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-semibold px-5 py-2.5 rounded-full transition text-sm">
+                Contact Us
+                <div class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-gray-700 text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="relative w-full min-h-[calc(100vh-80px)] flex items-center overflow-hidden">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="./images/banner-img.png" alt="Farmer in green crop field using digital tablet"
+                class="w-full h-full object-cover object-center">
+
+            <!-- Left Gradient Mask Overlay to ensure clean text readability -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-white via-white/90 sm:via-white/80 to-transparent w-full lg:w-[65%]">
+            </div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-12 lg:py-20 w-full">
+            <div class="max-w-xl">
+
+                <!-- Subheading / Tagline -->
+                <p class="text-gray-900 font-semibold text-base sm:text-lg mb-3 tracking-wide">
+                    Smart Farming for Better Future
+                </p>
+
+                <!-- Hero Title -->
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.15] tracking-tight">
+                    Empowering Farmers.
+                    <span class="block mt-1">Growing Tomorrow</span>
+                </h1>
+
+                <!-- Hero Description -->
+                <p class="text-gray-700 text-base sm:text-lg leading-relaxed mt-6 font-medium">
+                    AI-powered plant health support to help you identify possible diseases and understand your crops
+                    better.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap items-center gap-4 mt-8">
+                    <a href="#started"
+                        class="inline-flex items-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white font-semibold text-sm sm:text-base px-12 py-3.5 rounded-full transition shadow-md hover:shadow-lg">
+                        Get Started
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+
+                    <a href="#explore"
+                        class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-sm sm:text-base px-12 py-3.5 rounded-full transition shadow-md hover:shadow-lg">
+                        Explore Now
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Floating Glassmorphism Widget Card -->
+        <div class="absolute bottom-10 right-10 lg:right-20 z-20 hidden md:block">
+            <div
+                class="bg-black/35 backdrop-blur-md border border-white/20 p-4 rounded-2xl text-white shadow-2xl flex items-center gap-6 min-w-[280px]">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2.5 text-xs font-semibold">
+                        <i class="fa-solid fa-leaf text-emerald-400"></i>
+                        <span>Plant Health</span>
+                    </div>
+                    <div class="flex items-center gap-2.5 text-xs font-semibold">
+                        <i class="fa-solid fa-microchip text-emerald-400"></i>
+                        <span>AI Crop Insights</span>
+                    </div>
+                </div>
+
+                <!-- Circular Progress Ring Indicator -->
+                <div class="relative w-16 h-16 flex items-center justify-center">
+                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                        <path class="text-gray-600/50" stroke-width="3" stroke="currentColor" fill="none"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="text-emerald-500" stroke-dasharray="78, 100" stroke-width="3"
+                            stroke-linecap="round" stroke="currentColor" fill="none"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                        <span class="text-xs font-bold leading-none">78%</span>
+                        <span class="text-[8px] text-gray-300 font-medium">Crop Score</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
-    <div class="name">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, explicabo.</p>
+
+    <!-- ================= ABOUT US SECTION ================= -->
+    <section id="about" class="py-20 lg:py-28 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                <!-- LEFT COLUMN: Image Collage Layout -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full h-[460px] sm:h-[520px]">
+
+                        <!-- Top-Left Large Curved Image -->
+                        <div
+                            class="absolute left-0 top-0 w-[62%] h-[68%] rounded-tl-3xl rounded-tr-[120px] rounded-bl-3xl rounded-br-3xl overflow-hidden shadow-md">
+                            <img src="./images/about-img1.png" alt="Farmer harvesting crops at sunset"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Right Card Image -->
+                        <div class="absolute right-0 top-[18%] w-[52%] h-[46%] rounded-3xl overflow-hidden shadow-lg">
+                            <img src="./images/about-img2.png" alt="Farmer inspecting crops"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Bottom Card Image -->
+                        <div class="absolute left-[8%] bottom-0 w-[68%] h-[42%] overflow-hidden shadow-lg">
+                            <img src="./images/about-img3.png" alt="Farmer working in field"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Center Circular Leaf Badge Icon -->
+                        <div
+                            class="absolute left-[35%] top-[60%] -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-xl flex items-center justify-center border-4 border-white z-20">
+                            <div
+                                class="w-full h-full bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Content & Feature Cards -->
+                <div class="lg:col-span-6">
+
+                    <!-- Section Tag & Title -->
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">About Us</span>
+                        <div class="w-12 h-[2px] bg-emerald-600"></div>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                        Smarter Plant <span class="text-gray-900">Care with AI</span>
+                    </h2>
+
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mt-4 font-normal">
+                        AGRI-VISION is an AI-powered agricultural support platform designed to help users better
+                        understand plant health. By combining crop and disease information with AI-assisted image
+                        classification, the platform makes plant health information easier to access and understand.
+                    </p>
+
+                    <!-- Mission Box -->
+                    <div class="bg-gray-50/80 border border-gray-100 rounded-2xl p-5 mt-6 shadow-sm">
+                        <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">Our mission is simple</h4>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            Make plant health information more accessible through simple, intelligent and user-friendly
+                            technology.
+                        </p>
+                    </div>
+
+                    <!-- 4 Grid Feature Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+
+                        <!-- Feature 1 -->
+                        <div class="rounded-2xl p-4 flex flex-col justify-between">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <div
+                                    class="w-9 h-7 rounded-full flex items-center justify-center text-emerald-600 text-xs">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <h5 class="font-bold text-gray-900 text-xs sm:text-sm">AI Assisted Plant Analysis</h5>
+                            </div>
+                            <p class="text-gray-500 text-[11px] sm:text-xs leading-relaxed">
+                                Upload a plant or leaf image for AI Assisted health classification.
+                            </p>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div
+                            class="bg-gray-50/80 border border-gray-100 rounded-2xl p-4 shadow-sm flex flex-col justify-between">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <div
+                                    class="w-7 h-7 rounded-full flex items-center justify-center text-emerald-600 text-xs">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <h5 class="font-bold text-gray-900 text-xs sm:text-sm">Crop & Disease Knowledge</h5>
+                            </div>
+                            <p class="text-gray-500 text-[11px] sm:text-xs leading-relaxed">
+                                Explore useful information for crops, diseases, symptoms and general management.
+                            </p>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div
+                            class="bg-gray-50/80 border border-gray-100 rounded-2xl p-4 shadow-sm flex flex-col justify-between">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <div
+                                    class="w-7 h-7 rounded-full flex items-center justify-center text-emerald-600 text-xs">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <h5 class="font-bold text-gray-900 text-xs sm:text-sm">Simple & Accessible</h5>
+                            </div>
+                            <p class="text-gray-500 text-[11px] sm:text-xs leading-relaxed">
+                                A clear, user-friendly experience designed for easy plant health exploration.
+                            </p>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="rounded-2xl p-4 flex flex-col justify-between">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <div
+                                    class="w-7 h-7 rounded-full flex items-center justify-center text-emerald-600 text-xs">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <h5 class="font-bold text-gray-900 text-xs sm:text-sm">Prediction History</h5>
+                            </div>
+                            <p class="text-gray-500 text-[11px] sm:text-xs leading-relaxed">
+                                Keep track of previous image analyses and results in one place.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS & EXPLORE CROPS SECTION ================= -->
+    <section class="py-20 lg:py-28 bg-white overflow-hidden">
+
+        <!-- PART 1: HOW IT WORKS -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-16 mb-24">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[#A3D335] font-semibold uppercase tracking-wider text-sm">How it works</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mt-2">
+                    From a Plant <span class="text-[#A3D335] font-semibold">to a Smarter Insights</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed mt-3">
+                    A simple and intelligent process to help you understand your plant's health with ai assisted
+                    analysis
+                </p>
+            </div>
+
+            <!-- ================= 4 STEPS CARDS SECTION ================= -->
+
+            <!-- CURVED EXPLORE CARDS -->
+
+            <section class="bg-white py-6">
+                <div class="mx-auto max-w-7xl px-4 lg:px-8">
+                    <div class="flex flex-wrap justify-center gap-8">
+
+                        <!-- CARD 1 -->
+                        <div class="relative h-[320px] w-[226px] shrink-0">
+
+                            <svg class="absolute inset-0 h-full w-full" viewBox="0 0 206 295" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <defs>
+                                    <linearGradient id="green1" x1="0" y1="0" x2="206" y2="295"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8A9B86" />
+                                        <stop offset="0.55" stop-color="#477443" />
+                                        <stop offset="1" stop-color="#174D17" />
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M103 1 C55 1 23 30 23 79 L23 215 C23 263 43 294 85 294 L151 294 C193 294 205 265 205 220 L205 91 C205 35 166 1 103 1 Z"
+                                    fill="url(#green1)" />
+
+                                <path
+                                    d="M104 10 C62 10 36 34 36 72 L36 215 C36 250 52 278 82 289 C85 291 88 288 87 282 C87 262 103 250 126 250 L159 250 C183 250 193 228 193 195 L193 91 C193 42 160 10 104 10 Z"
+                                    fill="white" />
+                            </svg>
+
+                            <div class="absolute left-[38px] top-[32px] z-10
+                    flex w-[130px] flex-col items-center text-center">
+
+                                <div class="mb-4 text-[25px] leading-none text-green-700 ms-10">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+
+                                <h3 class="mb-3 text-[25px] font-normal leading-tight text-black ms-10">
+                                    Explore
+                                </h3>
+
+                                <p class="mb-3 w-full text-left text-[12px]
+                        leading-[17px] text-gray-800 ms-10">
+                                    Discover crops, diseases and useful plant health information
+                                </p>
+
+                                <img src="./images/explore-img.png" alt="Explore plants"
+                                    class="h-[65px] w-full rounded-[20px] object-cover ms-10">
+                            </div>
+
+                            <div class="absolute bottom-[20px] right-[43px] z-20
+                    font-serif text-[32px] font-bold leading-none text-[#d5dfd0]">
+                                01
+                            </div>
+                        </div>
+
+
+                        <!-- CARD 2 -->
+                        <div class="relative h-[320px] w-[226px] shrink-0">
+
+                            <svg class="absolute inset-0 h-full w-full" viewBox="0 0 206 295" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <defs>
+                                    <linearGradient id="green2" x1="0" y1="0" x2="206" y2="295"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8A9B86" />
+                                        <stop offset="0.55" stop-color="#477443" />
+                                        <stop offset="1" stop-color="#174D17" />
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M103 1 C55 1 23 30 23 79 L23 215 C23 263 43 294 85 294 L151 294 C193 294 205 265 205 220 L205 91 C205 35 166 1 103 1 Z"
+                                    fill="url(#green2)" />
+
+                                <path
+                                    d="M104 10 C62 10 36 34 36 72 L36 215 C36 250 52 278 82 289 C85 291 88 288 87 282 C87 262 103 250 126 250 L159 250 C183 250 193 228 193 195 L193 91 C193 42 160 10 104 10 Z"
+                                    fill="white" />
+                            </svg>
+
+                            <div class="absolute left-[38px] top-[32px] z-10
+                    flex w-[130px] flex-col items-center text-center">
+
+                                <div class="mb-4 text-[25px] leading-none text-green-700 ms-10">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+
+                                <h3 class="mb-3 text-[25px] font-normal leading-tight text-black ms-10">
+                                    Explore
+                                </h3>
+
+                                <p class="mb-3 w-full text-left text-[12px]
+                        leading-[17px] text-gray-800 ms-10">
+                                    Discover crops, diseases and useful plant health information
+                                </p>
+
+                                <img src="./images/explore-img.png" alt="Explore plants"
+                                    class="h-[65px] w-full rounded-[20px] object-cover ms-10">
+                            </div>
+
+                            <div class="absolute bottom-[20px] right-[43px] z-20
+                    font-serif text-[32px] font-bold leading-none text-[#d5dfd0]">
+                                02
+                            </div>
+                        </div>
+
+
+                        <!-- CARD 3 -->
+                        <div class="relative h-[320px] w-[226px] shrink-0">
+
+                            <svg class="absolute inset-0 h-full w-full" viewBox="0 0 206 295" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <defs>
+                                    <linearGradient id="green3" x1="0" y1="0" x2="206" y2="295"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8A9B86" />
+                                        <stop offset="0.55" stop-color="#477443" />
+                                        <stop offset="1" stop-color="#174D17" />
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M103 1 C55 1 23 30 23 79 L23 215 C23 263 43 294 85 294 L151 294 C193 294 205 265 205 220 L205 91 C205 35 166 1 103 1 Z"
+                                    fill="url(#green3)" />
+
+                                <path
+                                    d="M104 10 C62 10 36 34 36 72 L36 215 C36 250 52 278 82 289 C85 291 88 288 87 282 C87 262 103 250 126 250 L159 250 C183 250 193 228 193 195 L193 91 C193 42 160 10 104 10 Z"
+                                    fill="white" />
+                            </svg>
+
+                            <div class="absolute left-[38px] top-[32px] z-10
+                    flex w-[130px] flex-col items-center text-center">
+
+                                <div class="mb-4 text-[25px] leading-none text-green-700 ms-10">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+
+                                <h3 class="mb-3 text-[25px] font-normal leading-tight text-black ms-10">
+                                    Explore
+                                </h3>
+
+                                <p class="mb-3 w-full text-left text-[12px]
+                        leading-[17px] text-gray-800 ms-10">
+                                    Discover crops, diseases and useful plant health information
+                                </p>
+
+                                <img src="./images/explore-img.png" alt="Explore plants"
+                                    class="h-[65px] w-full rounded-[20px] object-cover ms-10">
+                            </div>
+
+                            <div class="absolute bottom-[20px] right-[43px] z-20
+                    font-serif text-[32px] font-bold leading-none text-[#d5dfd0]">
+                                03
+                            </div>
+                        </div>
+
+
+                        <!-- CARD 4 -->
+                        <div class="relative h-[320px] w-[226px] shrink-0">
+
+                            <svg class="absolute inset-0 h-full w-full" viewBox="0 0 206 295" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <defs>
+                                    <linearGradient id="green4" x1="0" y1="0" x2="206" y2="295"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8A9B86" />
+                                        <stop offset="0.55" stop-color="#477443" />
+                                        <stop offset="1" stop-color="#174D17" />
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M103 1 C55 1 23 30 23 79 L23 215 C23 263 43 294 85 294 L151 294 C193 294 205 265 205 220 L205 91 C205 35 166 1 103 1 Z"
+                                    fill="url(#green4)" />
+
+                                <path
+                                    d="M104 10 C62 10 36 34 36 72 L36 215 C36 250 52 278 82 289 C85 291 88 288 87 282 C87 262 103 250 126 250 L159 250 C183 250 193 228 193 195 L193 91 C193 42 160 10 104 10 Z"
+                                    fill="white" />
+                            </svg>
+
+                            <div class="absolute left-[38px] top-[32px] z-10
+                    flex w-[130px] flex-col items-center text-center">
+
+                                <div class="mb-4 text-[25px] leading-none text-green-700 ms-10">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+
+                                <h3 class="mb-3 text-[25px] font-normal leading-tight text-black ms-10">
+                                    Explore
+                                </h3>
+
+                                <p class="mb-3 w-full text-left text-[12px]
+                        leading-[17px] text-gray-800 ms-10">
+                                    Discover crops, diseases and useful plant health information
+                                </p>
+
+                                <img src="./images/explore-img.png" alt="Explore plants"
+                                    class="h-[65px] w-full rounded-[20px] object-cover ms-10">
+                            </div>
+
+                            <div class="absolute bottom-[20px] right-[43px] z-20
+                    font-serif text-[32px] font-bold leading-none text-[#d5dfd0]">
+                                04
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- PART 2: EXPLORE CROPS -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                <!-- Left Content Column -->
+                <div class="lg:col-span-5">
+
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">Explore Crops</span>
+                        <div class="w-12 h-[2px] bg-emerald-600"></div>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                        Explore A Wide Range Of Crops
+                    </h2>
+
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mt-4">
+                        Discover Detailed Information About The Crops You Grow, Including Their Growth Stages, Health
+                        Needs, Common Diseases, Symptoms, And Useful Plant-Care Information, Explore Different Crops In
+                        One Place And Build A Better Understanding Of The Factors That Can Affect Their Health And
+                        Growth.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="relative mt-6 max-w-md">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" placeholder="Search Crops..."
+                            class="w-full pl-11 pr-28 py-3.5 bg-white border border-gray-200 rounded-full text-sm text-gray-800 focus:outline-none focus:border-emerald-600 shadow-sm">
+                        <button
+                            class="absolute right-1.5 top-1.5 bottom-1.5 bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-semibold px-6 rounded-full transition">
+                            Search
+                        </button>
+                    </div>
+
+                    <!-- Explore All Crops Button -->
+                    <div class="mt-6">
+                        <a href="#"
+                            class="inline-flex items-center gap-3 bg-emerald-800 hover:bg-emerald-900 text-white font-semibold text-sm px-8 py-3.5 rounded-full transition shadow-md">
+                            Explore All Crops
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Custom Curved Shape with Floating Mini Circles & Connection Arcs -->
+                <div class="lg:col-span-7 relative flex justify-center items-center min-h-[400px] bg-red-300">
+
+                    <!-- Large Asymmetric Container Background Image -->
+                    <div class="relative w-full max-w-xl h-[420px] sm:h-[480px]">
+                        <img src="./images/crop_variety-img.png" alt="Farming tractor and field"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Thin Dotted Connection Ring / Arc behind the central elements -->
+                    <div
+                        class="absolute w-[360px] h-[360px] sm:w-[420px] sm:h-[420px] rounded-full border border-dashed border-white/60 pointer-events-none z-10">
+                    </div>
+
+                    <!-- Central Floating Hand & Plant Circle -->
+                    <div
+                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-white z-20">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=600&auto=format&fit=crop"
+                            alt="Plant care hand" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Orbiting Mini Circle 1 (Top Right - Potato/Plant) -->
+                    <div
+                        class="absolute right-14 top-10 sm:right-20 sm:top-14 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white z-30">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=300&auto=format&fit=crop"
+                            alt="Crop" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Orbiting Mini Circle 2 (Far Right - Chilies) -->
+                    <div
+                        class="absolute right-4 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white z-30">
+                        <img src="https://images.unsplash.com/photo-1595974482597-4b8b867bc550?q=80&w=300&auto=format&fit=crop"
+                            alt="Chilies" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Orbiting Mini Circle 3 (Bottom Right - Sprout) -->
+                    <div
+                        class="absolute right-24 bottom-10 sm:right-28 sm:bottom-14 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white z-30">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=300&auto=format&fit=crop"
+                            alt="Sprout" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Orbiting Mini Circle 4 (Bottom Left - Grains/Basket) -->
+                    <div
+                        class="absolute left-20 bottom-10 sm:left-24 sm:bottom-12 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white z-30">
+                        <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?q=80&w=300&auto=format&fit=crop"
+                            alt="Grains" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Orbiting Mini Circle 5 (Middle Left - Corn) -->
+                    <div
+                        class="absolute left-8 top-1/3 sm:left-12 sm:top-1/3 w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white z-30">
+                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=300&auto=format&fit=crop"
+                            alt="Corn" class="w-full h-full object-cover">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= AI CROP DISEASE ANALYSIS SECTION ================= -->
+    <section class="py-20 lg:py-28 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center">
+
+            <!-- Section Header -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl text-gray-900 tracking-tight">
+                    AI <span class="text-[#A3D335]">Crop Disease</span> Analysis
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed mt-3">
+                    Upload Or Capture A Leaf Photo To Get Instant Diagnostic Predictions And Treatment Guidance.
+                </p>
+            </div>
+
+        <!-- Main Graphic Container -->
+        <div class="relative w-full max-w-4xl mx-auto h-[420px] sm:h-[480px] flex items-center justify-center my-6">
+            
+            <!-- Curved Track Background Arc -->
+            <img src="./images/analsis-curve_img.png" alt="">
+
+            <!-- Center Drop Zone Circle -->
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-white border-4 border-emerald-600/30 shadow-2xl flex flex-col items-center justify-center p-6 text-center z-20">
+                <div class="text-emerald-600 text-3xl mb-2">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <p class="font-bold text-gray-900 text-xs sm:text-sm">DROP A LEAF PHOTO</p>
+                <p class="text-gray-500 text-[10px] mt-1">or click browse camera</p>
+            </div>
+
+
+            <!-- ================= 1. TOP-LEFT NODE (Upload File) ================= -->
+            <div class="absolute left-[2%] sm:left-[6%] top-[14%] sm:top-[16%] flex items-center z-30">
+                
+                <!-- Tooltip Card with Black Dot on Right Edge -->
+                <div class="relative bg-white border border-gray-100 shadow-xl rounded-2xl px-4 py-2.5 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 text-xs">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-bold text-gray-900 text-xs">Upload File</h4>
+                        <p class="text-[10px] text-gray-500">JPG, PNG up to 10 MB</p>
+                    </div>
+                    <!-- Black Dot connector starting point -->
+                    <div class="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-black rounded-full border-2 border-white"></div>
+                </div>
+
+                <!-- SVG Bent Line pointing towards the curve node -->
+                <svg class="w-20 h-16 overflow-visible -ml-1 -mt-2" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 25 H 55 L 90 45" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polygon points="85,40 96,48 88,42" fill="black"/>
+                </svg>
+
+            </div>
+
+
+            <!-- ================= 2. TOP-RIGHT NODE (Sample Photos) ================= -->
+            <!-- Tooltip Card -->
+            <div class="absolute right-[2%] sm:right-[8%] top-[16%] bg-white border border-gray-100 shadow-xl rounded-2xl px-4 py-2.5 flex items-center gap-3 z-30">
+                <div class="text-left">
+                    <h4 class="font-bold text-gray-900 text-xs">Sample Photos</h4>
+                    <p class="text-[10px] text-gray-500">Quick Test Demos</p>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xs">
+                    <i class="fa-solid fa-images"></i>
+                </div>
+            </div>
+            <!-- Connector Line & Node Circle -->
+            <div class="absolute right-[28%] top-[30%] z-30 flex items-center flex-row-reverse">
+                <div class="w-12 h-0.5 bg-gray-900"></div>
+                <div class="w-2.5 h-2.5 bg-gray-900 rounded-full -mr-1"></div>
+                <div class="absolute right-14 -top-4 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md border-2 border-white text-sm">
+                    <i class="fa-solid fa-images"></i>
+                </div>
+            </div>
+
+
+            <!-- ================= 3. BOTTOM-LEFT NODE (Crop Type) ================= -->
+            <!-- Tooltip Card -->
+            <div class="absolute left-[0%] sm:left-[2%] bottom-[20%] bg-emerald-50/90 border border-emerald-100 shadow-xl rounded-2xl px-4 py-2.5 flex items-center gap-3 z-30">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 text-xs">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="text-left">
+                    <h4 class="font-bold text-gray-900 text-xs">Crop Type</h4>
+                    <p class="text-[10px] text-gray-600 font-medium">Tomato (Default)</p>
+                </div>
+            </div>
+            <!-- Connector Line & Node Circle -->
+            <div class="absolute left-[30%] bottom-[30%] z-30 flex items-center">
+                <div class="w-10 h-0.5 bg-gray-900"></div>
+                <div class="w-2.5 h-2.5 bg-gray-900 rounded-full -ml-1"></div>
+                <div class="absolute left-12 -top-4 w-10 h-10 rounded-full bg-lime-500 text-white flex items-center justify-center shadow-md border-2 border-white text-sm">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+
+            <!-- ================= 4. BOTTOM-RIGHT NODE ================= -->
+            <!-- Tooltip Card -->
+            <div class="absolute right-[0%] sm:right-[2%] bottom-[20%] bg-fuchsia-50/90 border border-fuchsia-100 shadow-xl rounded-2xl px-4 py-2.5 flex items-center gap-3 z-30">
+                <div class="text-left">
+                    <h4 class="font-bold text-gray-900 text-xs">Live Camera</h4>
+                    <p class="text-[10px] text-gray-500">Webcam Stream</p>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-fuchsia-100 flex items-center justify-center text-fuchsia-600 text-xs">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+            </div>
+            <!-- Connector Line & Node Circle -->
+            <div class="absolute right-[30%] bottom-[30%] z-30 flex items-center flex-row-reverse">
+                <div class="w-10 h-0.5 bg-gray-900"></div>
+                <div class="w-2.5 h-2.5 bg-gray-900 rounded-full -mr-1"></div>
+                <div class="absolute right-12 -top-4 w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center shadow-md border-2 border-white text-sm">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Run AI Diagnosis Button -->
+        <div class="mt-8">
+            <a href="#diagnosis" class="inline-flex items-center gap-3 bg-emerald-800 hover:bg-emerald-900 text-white font-semibold text-sm sm:text-base px-9 py-4 rounded-full transition shadow-xl">
+                Run AI Diagnosis
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+
     </div>
+</section>
+        </div>
+    </section>
+
+    <!-- ================= USERS FEEDBACK SECTION ================= -->
+    <section class="py-20 lg:py-28 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-16">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-bold uppercase tracking-wider text-sm">Users Feedback</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mt-2">
+                    What Users Say About <span class="text-emerald-600">Agri Vision</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed mt-3">
+                    A simple and intelligent process to help you understand your plant's health with ai assisted
+                    analysis
+                </p>
+            </div>
+
+            <!-- 4 Feedback Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Feedback Card 1 -->
+                <div
+                    class="relative bg-lime-200/70 rounded-3xl p-6 shadow-md flex flex-col items-center text-center pt-10">
+
+                    <!-- Pinned Photo with Paperclip Effect -->
+                    <div class="absolute -top-1 w-24 h-24 transform rotate-2">
+                        <div class="absolute -top-1 right-3 text-gray-700 text-sm z-10">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </div>
+                        <img src="./images/aisha-daniels.png" alt="Aisha Daniels"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="mt-12">
+                        <h4 class="font-bold text-gray-900 text-base">Aisha Daniels</h4>
+                        <p class="text-gray-600 text-xs mt-0.5">Farmer</p>
+                    </div>
+
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-700 text-xs sm:text-sm leading-relaxed mt-4">
+                        <span class="text-emerald-700 font-serif text-base mr-1">“</span>Lorem Ipsum is simply dummy
+                        text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever.
+                    </p>
+                </div>
+
+                <!-- Feedback Card 2 -->
+                <div
+                    class="relative bg-lime-200/70 rounded-3xl p-6 shadow-md flex flex-col items-center text-center pt-10">
+
+                    <!-- Pinned Photo with Paperclip Effect -->
+                    <div class="absolute -top-1 w-24 h-24 transform rotate-2">
+                        <div class="absolute -top-3 right-3 text-gray-700 text-sm z-10">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </div>
+                        <img src="./images/aisha-daniels.png" alt="Aisha Daniels"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="mt-12">
+                        <h4 class="font-bold text-gray-900 text-base">Aisha Daniels</h4>
+                        <p class="text-gray-600 text-xs mt-0.5">Farmer</p>
+                    </div>
+
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-700 text-xs sm:text-sm leading-relaxed mt-4">
+                        <span class="text-emerald-700 font-serif text-base mr-1">“</span>Lorem Ipsum is simply dummy
+                        text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever.
+                    </p>
+                </div>
+
+                <!-- Feedback Card 3 -->
+                <div
+                    class="relative bg-lime-200/70 rounded-3xl p-6 shadow-md flex flex-col items-center text-center pt-10">
+
+                    <!-- Pinned Photo with Paperclip Effect -->
+                    <div class="absolute -top-1 w-24 h-24 transform rotate-2">
+                        <div class="absolute -top-3 right-3 text-gray-700 text-sm z-10">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </div>
+                        <img src="./images/aisha-daniels.png" alt="Aisha Daniels"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="mt-12">
+                        <h4 class="font-bold text-gray-900 text-base">Aisha Daniels</h4>
+                        <p class="text-gray-600 text-xs mt-0.5">Farmer</p>
+                    </div>
+
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-700 text-xs sm:text-sm leading-relaxed mt-4">
+                        <span class="text-emerald-700 font-serif text-base mr-1">“</span>Lorem Ipsum is simply dummy
+                        text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever.
+                    </p>
+                </div>
+
+                <!-- Feedback Card 4 -->
+                <div
+                    class="relative bg-lime-200/70 rounded-3xl p-6 shadow-md flex flex-col items-center text-center pt-10">
+
+                    <!-- Pinned Photo with Paperclip Effect -->
+                    <div class="absolute -top-1 w-24 h-24 transform rotate-2">
+                        <div class="absolute -top-3 right-3 text-gray-700 text-sm z-10">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </div>
+                        <img src="./images/aisha-daniels.png" alt="Aisha Daniels"
+                            class="w-full h-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="mt-12">
+                        <h4 class="font-bold text-gray-900 text-base">Aisha Daniels</h4>
+                        <p class="text-gray-600 text-xs mt-0.5">Farmer</p>
+                    </div>
+
+                    <!-- Testimonial Quote Text -->
+                    <p class="text-gray-700 text-xs sm:text-sm leading-relaxed mt-4">
+                        <span class="text-emerald-700 font-serif text-base mr-1">“</span>Lorem Ipsum is simply dummy
+                        text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="relative bg-white pt-20 overflow-hidden">
+
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10 pb-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16">
+
+                <!-- Brand Info & Socials -->
+                <div class="md:col-span-5">
+                    <a href="#" class="flex items-center gap-2 w-21">
+                        <img src="./images/navlogo.png" alt="">
+                    </a>
+
+
+                    <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-sm mb-6">
+                        Empowering farmers with smart insights for healthier crops and a more sustainable future.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-3">
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition text-sm">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition text-sm">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition text-sm">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SERVICES Links -->
+                <div class="md:col-span-2">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="#home" class="hover:text-emerald-600 transition">Home</a></li>
+                        <li><a href="#works" class="hover:text-emerald-600 transition">How it works</a></li>
+                        <li><a href="#crops" class="hover:text-emerald-600 transition">Crop Diseases</a></li>
+                        <li><a href="#analysis" class="hover:text-emerald-600 transition">Ai Diagnosis</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY Links -->
+                <div class="md:col-span-2">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="#about" class="hover:text-emerald-600 transition">About</a></li>
+                        <li><a href="#contact" class="hover:text-emerald-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- LEGAL Links -->
+                <div class="md:col-span-3">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="#privacy" class="hover:text-emerald-600 transition">Privacy Policy</a></li>
+                        <li><a href="#terms" class="hover:text-emerald-600 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Action Links -->
+            <div
+                class="flex flex-col sm:flex-row items-center justify-between border-t border-gray-100 pt-8 mt-12 gap-4">
+                <p class="text-gray-500 text-xs">
+                    © 2026 Agri Vision.
+                </p>
+
+                <div class="flex items-center gap-6 text-sm font-semibold text-gray-800">
+                    <a href="#login" class="hover:text-emerald-600 transition">Log in</a>
+                    <a href="#trial" class="flex items-center gap-2 hover:text-emerald-600 transition">
+                        Start free trial <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Background Image with Fog/Gradient Overlay -->
+        <div class="relative w-full h-[260px] sm:h-[320px] overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-transparent via-white/80 to-white z-10"></div>
+            <img src="./images/footer-img.png" alt="Green farmland background"
+                class="w-full h-full object-cover object-center">
+        </div>
+
+    </footer>
 </body>
-</html> 
+
+</html>
