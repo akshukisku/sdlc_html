@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tailwindcss -i ./src/style.css -o ./input/style.css --watch"
+    "build":"tailwindcss -i ./src/style.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "type": "commonjs",
@@ -14,3 +14,4 @@
     "tailwindcss": "^4.3.3"
   }
 }
+
