@@ -24,15 +24,15 @@
         <div
             class="mx-auto grid h-17 w-full max-w-250 grid-cols-[1fr_auto] items-center px-4 sm:px-5 md:grid-cols-[1fr_auto_1fr]">
 
-            <a href="../index.html" class="shrink-0 justify-self-start">
+            <a href="./admin/index.html" class="shrink-0 justify-self-start">
                 <img src="../images/navlogo.png" alt="Agri Vision" class="h-8.5 w-auto sm:h-11">
             </a>
 
             <nav class="hidden items-center gap-5 text-[12px] font-bold leading-none text-black md:flex lg:gap-8.5">
 
-                <a href="../pages/admin/index.html" class="transition hover:text-[#358A2F]">Home</a>
+                <a href="./admin/index.html" class="transition hover:text-[#358A2F]">Home</a>
 
-                <a href="../pages/about_us.html" class="flex items-center gap-1 transition hover:text-[#358A2F]">
+                <a href="./about_us.html" class="flex items-center gap-1 transition hover:text-[#358A2F]">
                     About Us
                     <svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -40,13 +40,13 @@
                     </svg>
                 </a>
 
-                <a href="#" class="transition hover:text-[#358A2F]">Diseases</a>
+                <a href="./admin/index.html#diseases" class="transition hover:text-[#358A2F]">Diseases</a>
 
-                <a href="crops.html" class="ml-2.5 transition hover:text-[#358A2F]">Crops</a>
+                <a href="./crops.html" class="ml-2.5 transition hover:text-[#358A2F]">Crops</a>
 
                 <a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How It Works</a>
 
-                <a href="./articles.html" class="transition hover:text-[#358A2F]">Articles</a>
+                <a href="./articles.html" class="transition text-[#358A2F]">Articles <i class="fa-solid fa-angle-down"></i></a>
 
             </nav>
 
@@ -74,8 +74,8 @@
         <div id="mobileMenu" class="hidden border-t border-gray-200 bg-[#f6f6f6] px-4 py-4 sm:px-5 md:hidden">
             <nav class="flex flex-col gap-4 text-[13px] font-semibold text-gray-700">
                 <a href="./admin/index.html" class="hover:text-[#358A2F]">Home</a>
-                <a href="../pages/about_us.html" class="hover:text-[#358A2F]">About Us</a>
-                <a href="../index.html#diseases" class="hover:text-[#358A2F]">Diseases</a>
+                <a href="./about_us.html" class="hover:text-[#358A2F]">About Us</a>
+                <a href="./admin/index.html#diseases" class="hover:text-[#358A2F]">Diseases</a>
                 <a href="./crops.html" class="hover:text-[#358A2F]">Crops</a>
                 <a href="./how-it-works.html" class="hover:text-[#358A2F]">How It Works</a>
                 <a href="./articles.html" class="hover:text-[#358A2F]">Articles</a>
@@ -114,12 +114,12 @@
 
                         <p
                             class="mx-auto mt-3 max-w-lg text-[14px] font-normal leading-relaxed text-gray-900 sm:text-[16px] lg:mx-0">
-                            AGRI-VISION is an AI-powered agricultural platform that helps farmers and plant lovers
-                            identify plant diseases.
+                            Browse crop profiles, learn about common diseases and symptoms, and keep everything you
+                            need to know about your crops in one place.
                         </p>
 
                         <div class="mt-6 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-                            <a href="#"
+                            <a href="./admin/index.html#analysis"
                                 class="group relative mt-4 inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-[#2f6f2c] px-4 py-2 text-[12px] font-semibold text-white">
 
                                 <span
@@ -315,9 +315,9 @@
 
                 <div class="text-center">
                     <p class="flex items-center justify-center gap-3 text-sm text-green-700 sm:text-base">
-                        <span class="hidden h-px w-14 bg-gray-300 sm:block"></span>
+                        <span class="hidden h-px w-14 bg-lime-600 sm:block"></span>
                         Why Explore With Agri Vision?
-                        <span class="hidden h-px w-14 bg-gray-300 sm:block"></span>
+                        <span class="hidden h-px w-14 bg-lime-600 sm:block"></span>
                     </p>
                     <h2 class="mt-2 text-2xl font-bold text-[#0f2a14] min-[400px]:text-3xl sm:text-4xl">
                         Useful Crop Knowledge, <span class="text-green-700">Made Easier</span>
@@ -327,6 +327,7 @@
                 <div class="mx-auto mt-10 grid max-w-md gap-8 sm:mt-12 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3">
 
                     <div class="flex items-center gap-4">
+
                         <div class="h-16 w-16 shrink-0 rounded-full bg-[#d9d9d9] sm:h-20 sm:w-20"></div>
                         <div class="min-w-0">
                             <h3 class="text-lg font-semibold text-[#0f2a14] sm:text-xl">Crop information</h3>
@@ -378,7 +379,7 @@
                         <div class="min-w-0">
                             <h3 class="text-xl font-semibold text-[#0f2a14]">Choose a crop</h3>
                             <p class="mt-1 text-xs leading-4 text-gray-600">Find the crop you want to learn about.</p>
-                            <a href="#"
+                            <a href="./crops.html"
                                 class="mt-3 inline-block text-sm font-semibold text-green-700 hover:underline">Browse
                                 Crop
                                 Profiles <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></a>
@@ -391,7 +392,7 @@
                         <div class="min-w-0">
                             <h3 class="text-xl font-semibold text-[#0f2a14]">Explore plant health</h3>
                             <p class="mt-1 text-xs leading-4 text-gray-600">Read about common disease classes.</p>
-                            <a href="#"
+                            <a href="./admin/index.html#diseases"
                                 class="mt-3 inline-block text-sm font-semibold text-green-700 hover:underline">Visit
                                 Disease
                                 Library <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></a>
@@ -404,7 +405,7 @@
                         <div class="min-w-0">
                             <h3 class="text-xl font-semibold text-[#0f2a14]">Analyze a plant</h3>
                             <p class="mt-1 text-xs leading-4 text-gray-600">Upload a plant image for AI support.</p>
-                            <a href="#"
+                            <a href="./admin/index.html#analysis"
                                 class="mt-3 inline-block text-sm font-semibold text-green-700 hover:underline">Start
                                 Image
                                 Analysis <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></a>
@@ -441,7 +442,7 @@
 
                 <div class="col-span-2 mt-0 sm:col-span-3 lg:col-span-1 lg:mt-2.5">
 
-                    <a href="./crops.html" class="inline-block">
+                    <a href="./admin/index.html" class="inline-block">
                         <img src="../images/navlogo.png" alt="Agri Vision" class="h-12 w-auto sm:h-14">
                     </a>
 
@@ -488,22 +489,21 @@
                 <div>
                     <h4 class="flex h-10 items-center text-[18px] font-semibold leading-none text-[#111]">Platform</h4>
                     <ul class="mt-5.5 space-y-6 text-[14px] leading-5 text-[#111]">
-                        <li><a href="../pages/admin/index.html" class="transition hover:text-[#358A2F]">Home</a></li>
+                        <li><a href="./admin/index.html" class="transition hover:text-[#358A2F]">Home</a></li>
                         <li><a href="./about_us.html" class="transition hover:text-[#358A2F]">About Us</a></li>
                         <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Explore Crops</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
+                        <li><a href="./admin/index.html#diseases" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
                         <li><a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How it works</a></li>
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
                     </ul>
                 </div>
 
                 <!-- resources -->
                 <div>
-                    <h4 class="flex h-10 items-center text-[22px] font-medium leading-none text-[#111] lg:text-[26px]">
-                        Resources</h4>
+                    <h4 class="flex h-10 items-center text-[18px] font-semibold leading-none text-[#111]">Resources</h4>
                     <ul class="mt-5.5 space-y-6 text-[14px] leading-5 text-[#111]">
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Disease Library</a></li>
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
+                        <li><a href="./admin/index.html#diseases" class="transition hover:text-[#358A2F]">Disease Library</a></li>
                         <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Crop Knowledge</a></li>
                         <li><a href="#" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
                     </ul>
@@ -511,8 +511,7 @@
 
                 <!-- legal -->
                 <div>
-                    <h4 class="flex h-10 items-center text-[22px] font-medium leading-none text-[#111] lg:text-[26px]">
-                        Legal</h4>
+                    <h4 class="flex h-10 items-center text-[18px] font-semibold leading-none text-[#111]">Legal</h4>
                     <ul class="mt-5.5 space-y-6 text-[14px] leading-5 text-[#111]">
                         <li><a href="#" class="transition hover:text-[#358A2F]">Privacy Policy</a></li>
                         <li><a href="#" class="transition hover:text-[#358A2F]">Terms of Use</a></li>
