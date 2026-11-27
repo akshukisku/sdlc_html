@@ -96,3 +96,36 @@ menuBtn.addEventListener("click", function () {
     buildDots();
     restart();
 })();
+
+// disease search + filter
+const diseaseSearch = document.getElementById("diseaseSearch");
+const filterBtns = document.querySelectorAll(".filter-btn");
+const disCards = document.querySelectorAll(".dis-card");
+
+if (diseaseSearch && filterBtns.length) {
+    let activeFilter = "all";
+
+    function applyFilter() {
+        const q = diseaseSearch.value.trim().toLowerCase();
+        disCards.forEach((card) => {
+            const okType = activeFilter === "all" || card.dataset.type === activeFilter;
+            const okText = card.dataset.name.includes(q);
+            card.classList.toggle("hidden", !(okType && okText));
+        });
+    }
+
+    filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            activeFilter = btn.dataset.filter;
+            filterBtns.forEach((b) => {
+                const on = b === btn;
+                b.classList.toggle("bg-[#2f7d32]", on);
+                b.classList.toggle("text-white", on);
+                b.classList.toggle("text-gray-800", !on);
+            });
+            applyFilter();
+        });
+    });
+
+    diseaseSearch.addEventListener("input", applyFilter);
+}

@@ -21,7 +21,7 @@
     <header class="relative z-30 w-full bg-[#f6f6f6] font-['DM_Sans',sans-serif]">
 
         <div
-            class="mx-auto grid h-17 w-full max-w-250 grid-cols-[1fr_auto] items-center px-4 sm:px-5 md:grid-cols-[1fr_auto_1fr]">
+            class="mx-auto grid h-17 w-full max-w-250 grid-cols-[1fr_auto] items-center px-3 min-[400px]:px-4 sm:px-5 md:grid-cols-[1fr_auto_1fr]">
 
             <a href="./articles.html" class="shrink-0 justify-self-start">
                 <img src="../images/navlogo.png" alt="Agri Vision" class="h-8.5 w-auto sm:h-11">
@@ -40,29 +40,36 @@
                     </svg>
                 </a>
 
-                <a href="#" class="transition hover:text-[#358A2F]">Diseases</a>
+                <a href="./diseases.html" class="transition hover:text-[#358A2F]">Diseases</a>
 
                 <a href="crops.html" target="_self" class="ml-2.5 transition hover:text-[#358A2F]">Crops</a>
 
                 <a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How It Works</a>
 
-                <a href="./articles.html" class="transition text-[#358A2F]">Articles <i class="fa-solid fa-angle-down"></i></a>
+                <a href="./articles.html"
+                    class="transition text-[#358A2F] relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#6dbe45]">Articles
+                </a>
+
+                <a href="./contact.html" class="transition hover:text-[#358A2F]">Contact</a>
 
             </nav>
 
             <div class="flex items-center justify-end gap-3">
 
                 <a href="#"
-                    class="hidden h-10 items-center gap-2 rounded-2xl bg-[#2f7d32] px-4.25 text-[12px] font-semibold text-white transition hover:bg-[#276b2a] sm:flex">
+                    class="group hidden h-11 items-center gap-4 rounded-full bg-[#1f5a2b] pl-6 pr-1.5 text-[13px] font-medium text-white transition hover:bg-[#184a23] sm:flex">
                     Login
-                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14" />
-                        <path d="m13 6 6 6-6 6" />
-                    </svg>
+                    <span
+                        class="flex h-8 w-8 items-center justify-center rounded-full bg-[#d4f56b] text-[#1f5a2b] transition group-hover:translate-x-0.5">
+                        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m13 6 6 6-6 6" />
+                        </svg>
+                    </span>
                 </a>
 
-                <button id="menuBtn" aria-label="Open menu" aria-expanded="false"
+                <button id="menuBtn"
                     class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 text-black md:hidden"
                     type="button">
                     <i class="fa-solid fa-bars text-[15px]"></i>
@@ -75,10 +82,11 @@
             <nav class="flex flex-col gap-4 text-[13px] font-semibold text-gray-700">
                 <a href="./admin/index.html" target="_self" class="hover:text-[#358A2F]">Home</a>
                 <a href="../pages/about_us.html" target="_self" class="hover:text-[#358A2F]">About Us</a>
-                <a href="../index.html#diseases" class="hover:text-[#358A2F]">Diseases</a>
+                <a href="./diseases.html" class="hover:text-[#358A2F]">Diseases</a>
                 <a href="./crops.html" target="_self" class="hover:text-[#358A2F]">Crops</a>
                 <a href="./how-it-works.html" class="hover:text-[#358A2F]">How It Works</a>
                 <a href="./articles.html" class="hover:text-[#358A2F]">Articles</a>
+                <a href="./contact.html" class="hover:text-[#1E8211]">Contact</a>
                 <a href="#"
                     class="mt-1 inline-flex w-fit items-center gap-2 rounded-xl bg-[#2f7d32] px-4 py-2.5 text-[12px] font-semibold text-white sm:hidden">
                     Login
@@ -101,8 +109,8 @@
                 style="background:linear-gradient(to right,#d3e8d5 0%,#9ccaa1 14%,#6fb274 28%,#5aa35e 40%,#6cb071 52%,#8ec295 68%,#b4d8b9 84%,#cfe6d2 100%);">
             </div>
 
-            <div class="relative z-10 mx-auto w-full max-w-295 px-4 py-10 sm:px-5 sm:py-14 lg:px-10 lg:py-20">
-                <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+            <div class="relative z-10 mx-auto w-full max-w-295 px-3 py-10 min-[400px]:px-4 sm:px-5 sm:py-14 lg:px-10 lg:py-20">
+                <div class="grid items-center gap-8 sm:gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
 
                     <div class="mx-auto w-full min-w-0 max-w-2xl text-center lg:mx-0 lg:text-left">
 
@@ -129,7 +137,7 @@
 
                     <!-- icons graphic -->
                     <div
-                        class="relative mx-auto aspect-405/334 w-full max-w-[20rem] sm:max-w-md lg:ml-auto lg:mr-0 lg:max-w-140">
+                        class="relative mx-auto aspect-405/334 w-full max-w-[20rem] min-[400px]:max-w-[22rem] sm:max-w-md lg:ml-auto lg:mr-0 lg:max-w-140">
 
                         <div class="absolute inset-0"
                             style="background:radial-gradient(circle at 45% 51.5%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.1) 8%, rgba(255,255,255,0) 30%);">
@@ -167,9 +175,10 @@
                 </div>
             </div>
         </section>
+
         <!-- articles -->
         <section id="articles" class="bg-white py-14 font-['DM_Sans',sans-serif]">
-            <div class="mx-auto max-w-290 px-5">
+            <div class="mx-auto max-w-290 px-3 min-[400px]:px-4 sm:px-5">
 
                 <!-- featured heading -->
                 <div class="text-center">
@@ -185,12 +194,12 @@
 
                 <!-- featured card -->
                 <article
-                    class="mt-8 flex flex-col gap-10 rounded-3xl bg-white p-7 shadow-[0_10px_40px_rgba(0,0,0,0.10)] md:flex-row md:items-center md:gap-8 md:px-8 md:py-9">
+                    class="mt-8 flex flex-col gap-6 rounded-3xl bg-white p-4 shadow-[0_10px_40px_rgba(0,0,0,0.10)] min-[400px]:p-5 sm:gap-10 sm:p-7 md:flex-row md:items-center md:gap-8 md:px-8 md:py-9">
 
                     <img src="../images/article-image.png" alt="Scientist checking a plant sample"
-                        class="h-56 w-full rounded-2xl object-cover md:h-68 md:w-108.75 md:shrink-0">
+                        class="h-48 w-full rounded-2xl object-cover min-[400px]:h-56 md:h-68 md:w-108.75 md:shrink-0">
 
-                    <div>
+                    <div class="min-w-0">
                         <h3 class="max-w-80 text-2xl font-semibold leading-8 text-[#0f2a14]">
                             A Beginner's Guide To Identifying Plant Diseases
                         </h3>
@@ -217,7 +226,7 @@
 
                 <!-- latest heading -->
                 <div class="mt-20 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
+                    <div class="min-w-0">
                         <p class="flex items-center gap-3 text-base text-green-700">
                             Latest Articles
                             <span class="h-px w-14 bg-gray-300"></span>
@@ -236,12 +245,12 @@
                 </div>
 
                 <!-- article cards -->
-                <div class="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 max-w-300">
+                <div class="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3 max-w-300">
 
                     <!-- card 1 -->
                     <article class="overflow-hidden rounded-2xl bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]">
                         <img src="../images/article1.png" alt="Healthy crop rows" class="h-45 w-full object-cover">
-                        <div class="px-6 pb-5 pt-4">
+                        <div class="px-4 pb-5 pt-4 min-[400px]:px-5 sm:px-6">
                             <span
                                 class="inline-block rounded bg-lime-100 px-2.5 py-1 text-[10px] font-medium uppercase text-green-700">Crop
                                 Care</span>
@@ -255,7 +264,7 @@
                     <article class="overflow-hidden rounded-2xl bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]">
                         <img src="../images/article2.png" alt="Tomato leaf with early blight"
                             class="h-45 w-full object-cover">
-                        <div class="px-6 pb-5 pt-4">
+                        <div class="px-4 pb-5 pt-4 min-[400px]:px-5 sm:px-6">
                             <span
                                 class="inline-block rounded bg-lime-100 px-2.5 py-1 text-[10px] font-medium uppercase text-green-700">Disease
                                 Guide</span>
@@ -269,7 +278,7 @@
                     <article class="overflow-hidden rounded-2xl bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]">
                         <img src="../images/article3.png" alt="Seedling growing in soil"
                             class="h-45 w-full object-cover">
-                        <div class="px-6 pb-5 pt-4">
+                        <div class="px-4 pb-5 pt-4 min-[400px]:px-5 sm:px-6">
                             <span
                                 class="inline-block rounded bg-lime-100 px-2.5 py-1 text-[10px] font-medium uppercase text-green-700">Soil
                                 Health</span>
@@ -283,7 +292,7 @@
                     <article class="overflow-hidden rounded-2xl bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]">
                         <img src="../images/article4.png" alt="Wind turbine in a field"
                             class="h-45 w-full object-cover">
-                        <div class="px-6 pb-5 pt-4">
+                        <div class="px-4 pb-5 pt-4 min-[400px]:px-5 sm:px-6">
                             <span
                                 class="inline-block rounded bg-lime-100 px-2.5 py-1 text-[10px] font-medium uppercase text-green-700">Smart
                                 Farming</span>
@@ -297,7 +306,7 @@
                     <article class="overflow-hidden rounded-2xl bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]">
                         <img src="../images/article5.png" alt="Beetles on a potato leaf"
                             class="h-45 w-full object-cover">
-                        <div class="px-6 pb-5 pt-4">
+                        <div class="px-4 pb-5 pt-4 min-[400px]:px-5 sm:px-6">
                             <span
                                 class="inline-block rounded bg-lime-100 px-2.5 py-1 text-[10px] font-medium uppercase text-green-700">Pest
                                 Control</span>
@@ -311,7 +320,7 @@
                     <article class="overflow-hidden rounded-2xl bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]">
                         <img src="../images/article6.png" alt="Greenhouse with leafy crops"
                             class="h-45 w-full object-cover">
-                        <div class="px-6 pb-5 pt-4">
+                        <div class="px-4 pb-5 pt-4 min-[400px]:px-5 sm:px-6">
                             <span
                                 class="inline-block rounded bg-lime-100 px-2.5 py-1 text-[10px] font-medium uppercase text-green-700">Farming
                                 Techniques</span>
@@ -344,12 +353,12 @@
         </div>
 
         <div
-            class="relative z-10 mx-auto max-w-302.5 px-4 pb-48 pt-14 sm:px-5 sm:pt-20 lg:px-8 lg:pb-40 lg:pt-40 xl:px-0">
+            class="relative z-10 mx-auto max-w-302.5 px-3 pb-48 pt-14 min-[400px]:px-4 sm:px-5 sm:pt-20 lg:px-8 lg:pb-40 lg:pt-40 xl:px-0">
 
             <div
-                class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] xl:grid-cols-[621px_202px_202px_1fr] xl:gap-x-0">
+                class="grid grid-cols-1 gap-x-6 gap-y-10 min-[400px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] xl:grid-cols-[621px_202px_202px_1fr] xl:gap-x-0">
 
-                <div class="col-span-2 mt-0 sm:col-span-3 lg:col-span-1 lg:mt-2.5">
+                <div class="col-span-1 mt-0 min-[400px]:col-span-2 sm:col-span-3 lg:col-span-1 lg:mt-2.5">
 
                     <a href="./articles.html" class="inline-block">
                         <img src="../images/navlogo.png" alt="Agri Vision" class="h-12 w-auto sm:h-14">
@@ -401,9 +410,9 @@
                         <li><a href="../pages/admin/index.html" class="transition hover:text-[#358A2F]">Home</a></li>
                         <li><a href="./about_us.html" class="transition hover:text-[#358A2F]">About Us</a></li>
                         <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Explore Crops</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
+                        <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
                         <li><a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How it works</a></li>
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
                     </ul>
                 </div>
 
@@ -412,10 +421,10 @@
                     <h4 class="flex h-10 items-center text-[22px] font-medium leading-none text-[#111] lg:text-[26px]">
                         Resources</h4>
                     <ul class="mt-5.5 space-y-6 text-[14px] leading-5 text-[#111]">
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Disease Library</a></li>
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
+                        <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Disease Library</a></li>
                         <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Crop Knowledge</a></li>
-                        <li><a href="#" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
+                        <li><a href="./contact.html" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
                     </ul>
                 </div>
 

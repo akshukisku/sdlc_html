@@ -32,7 +32,7 @@
                 <a href="./admin/index.html" target="_self" class="transition hover:text-[#358A2F]">Home</a>
 
                 <a href="../pages/about_us.html" target="_self"
-                    class="flex items-center gap-1 transition text-[#358A2F]">
+                    class="flex items-center gap-1 transition text-[#358A2F] relative py-2 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#6dbe45]">
                     About Us
                     <svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -40,7 +40,7 @@
                     </svg>
                 </a>
 
-                <a href="#" class="transition hover:text-[#358A2F]">Diseases</a>
+                <a href="./diseases.html" class="transition hover:text-[#358A2F]">Diseases</a>
 
                 <a href="crops.html" target="_self" class="ml-2.5 transition hover:text-[#358A2F]">Crops</a>
 
@@ -48,21 +48,26 @@
 
                 <a href="../pages/articles.html" target="_self" class="transition hover:text-[#358A2F]">Articles</a>
 
+                <a href="./contact.html" class="transition hover:text-[#358A2F]">Contact</a>
+
             </nav>
 
             <div class="flex items-center justify-end gap-3">
 
                 <a href="#"
-                    class="hidden h-10 items-center gap-2 rounded-2xl bg-[#2f7d32] px-4.25 text-[12px] font-semibold text-white transition hover:bg-[#276b2a] sm:flex">
+                    class="group hidden h-11 items-center gap-4 rounded-full bg-[#1f5a2b] pl-6 pr-1.5 text-[13px] font-medium text-white transition hover:bg-[#184a23] sm:flex">
                     Login
-                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14" />
-                        <path d="m13 6 6 6-6 6" />
-                    </svg>
+                    <span
+                        class="flex h-8 w-8 items-center justify-center rounded-full bg-[#d4f56b] text-[#1f5a2b] transition group-hover:translate-x-0.5">
+                        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m13 6 6 6-6 6" />
+                        </svg>
+                    </span>
                 </a>
 
-                <button id="menuBtn" aria-label="Open menu" aria-expanded="false"
+                <button id="menuBtn"
                     class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 text-black md:hidden"
                     type="button">
                     <i class="fa-solid fa-bars text-[15px]"></i>
@@ -75,10 +80,11 @@
             <nav class="flex flex-col gap-4 text-[13px] font-semibold text-gray-700">
                 <a href="./admin/index.html" target="_self" class="hover:text-[#358A2F]">Home</a>
                 <a href="../pages/about_us.html" target="_self" class="hover:text-[#358A2F]">About Us</a>
-                <a href="./about_us.html" class="hover:text-[#358A2F]">Diseases</a>
+                <a href="./diseases.html" class="hover:text-[#358A2F]">Diseases</a>
                 <a href="./crops.html" class="hover:text-[#358A2F]">Crops</a>
                 <a href="./how-it-works.html" class="hover:text-[#358A2F]">How It Works</a>
                 <a href="./articles.html" class="hover:text-[#358A2F]">Articles</a>
+                <a href="../contact.html" class="hover:text-[#1E8211]">Contact</a>
                 <a href="#"
                     class="mt-1 inline-flex w-fit items-center gap-2 rounded-xl bg-[#2f7d32] px-4 py-2.5 text-[12px] font-semibold text-white sm:hidden">
                     Login
@@ -148,6 +154,7 @@
 
                         <div
                             class="absolute left-[45.2%] top-[51.5%] aspect-square w-[56.3%] -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-white">
+                            <img src="../images/Ellipse-plant.png" alt="">
                         </div>
 
                         <div
@@ -162,7 +169,8 @@
 
                         <div
                             class="absolute left-[13.8%] top-[86%] flex aspect-square w-[12.8%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md">
-                            <img src="../images/artificial-intelligence-04.svg" alt="" class="w-5 sm:w-10 md:w-12 lg:w-10 h-auto">
+                            <img src="../images/artificial-intelligence-04.svg" alt=""
+                                class="w-5 sm:w-10 md:w-12 lg:w-10 h-auto">
                         </div>
 
                         <div
@@ -317,7 +325,8 @@
 
                         <div class="order-2 px-3 pb-4 sm:px-4 lg:order-1 lg:px-6 lg:pb-0">
                             <div class="flex items-center gap-2.5">
-                                <img src="../images/Ai-plant.svg" alt="" class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+                                <img src="../images/Ai-plant.svg" alt=""
+                                    class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
                                 <h3 class="text-[18px] font-semibold leading-7 text-[#0f2d12] sm:text-[20px]">AI Plant
                                     Analysis</h3>
                             </div>
@@ -374,7 +383,8 @@
 
                         <div class="px-3 pb-4 sm:px-4 lg:px-0 lg:pb-0">
                             <div class="flex items-center gap-2.5">
-                                <img src="../images/plant8.svg" alt="" class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+                                <img src="../images/plant8.svg" alt=""
+                                    class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
                                 <h3 class="text-[18px] font-semibold leading-7 text-[#0f2d12] sm:text-[20px]">Crop
                                     Information</h3>
                             </div>
@@ -408,7 +418,8 @@
 
                         <div class="order-2 px-3 pb-4 sm:px-4 lg:order-1 lg:px-6 lg:pb-0">
                             <div class="flex items-center gap-2.5">
-                                <img src="../images/plant4.svg" alt="" class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+                                <img src="../images/plant4.svg" alt=""
+                                    class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
                                 <h3 class="text-[18px] font-semibold leading-7 text-[#0f2d12] sm:text-[20px]">Disease
                                     Identification</h3>
                             </div>
@@ -465,7 +476,8 @@
 
                         <div class="px-3 pb-4 sm:px-4 lg:px-0 lg:pb-0">
                             <div class="flex items-center gap-2.5">
-                                <img src="../images/plant-prediction.svg" alt="" class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+                                <img src="../images/plant-prediction.svg" alt=""
+                                    class="h-6 w-6 min-[400px]:h-8 min-[400px]:w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
                                 <h3 class="text-[18px] font-semibold leading-7 text-[#0f2d12] sm:text-[20px]">Prediction
                                     History</h3>
                             </div>
@@ -572,9 +584,9 @@
                         <li><a href="../pages/admin/index.html" class="transition hover:text-[#358A2F]">Home</a></li>
                         <li><a href="./about_us.html" class="transition hover:text-[#358A2F]">About Us</a></li>
                         <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Explore Crops</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
+                        <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
                         <li><a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How it works</a></li>
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
                     </ul>
                 </div>
 
@@ -582,10 +594,10 @@
                     <h4 class="flex h-10 items-center text-[22px] font-medium leading-none text-[#111] lg:text-[26px]">
                         Resources</h4>
                     <ul class="mt-5.5 space-y-6 text-[14px] leading-5 text-[#111]">
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Disease Library</a></li>
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
+                        <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Disease Library</a></li>
                         <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Crop Knowledge</a></li>
-                        <li><a href="#" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
+                        <li><a href="./contact.html" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
                     </ul>
                 </div>
 

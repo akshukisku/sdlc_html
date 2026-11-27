@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Crops | Agri Vision</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- navbar -->
+    <header class="relative z-30 w-full bg-[#f6f6f6] font-['DM_Sans',sans-serif]">
+
+        <div
+            class="mx-auto grid h-17 w-full max-w-250 grid-cols-[1fr_auto] items-center px-4 sm:px-5 md:grid-cols-[1fr_auto_1fr]">
+
+            <a href="./all-crops.html" class="shrink-0 justify-self-start">
+                <img src="../images/navlogo.png" alt="Agri Vision" class="h-8.5 w-auto sm:h-11">
+            </a>
+
+            <nav class="hidden items-center gap-5 text-[12px] font-bold leading-none text-black md:flex lg:gap-8.5">
+
+                <a href="./admin/index.html" class="transition hover:text-[#358A2F]">Home</a>
+
+                <a href="./about_us.html" class="flex items-center gap-1 transition hover:text-[#358A2F]">
+                    About Us
+                    <svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </a>
+
+                <a href="./diseases.html" class="transition hover:text-[#358A2F]">Diseases</a>
+
+                <a href="./crops.html" class="ml-2.5 transition hover:text-[#358A2F]">Crops <i
+                        class="fa-solid fa-angle-down"></i>
+                </a>
+
+                <a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How It Works</a>
+
+                <a href="./articles.html" class="transition hover:text-[#358A2F]">Articles </a>
+
+                <a href="./contact.html" class="transition hover:text-[#358A2F]">Contact</a>
+
+            </nav>
+
+            <!-- login button and menu icon -->
+            <div class="flex items-center justify-end gap-3">
+
+                <a href="#"
+                    class="group hidden h-11 items-center gap-4 rounded-full bg-[#1f5a2b] pl-6 pr-1.5 text-[13px] font-medium text-white transition hover:bg-[#184a23] sm:flex">
+                    Login
+                    <span
+                        class="flex h-8 w-8 items-center justify-center rounded-full bg-[#d4f56b] text-[#1f5a2b] transition group-hover:translate-x-0.5">
+                        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m13 6 6 6-6 6" />
+                        </svg>
+                    </span>
+                </a>
+
+                <button id="menuBtn"
+                    class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 text-black md:hidden"
+                    type="button">
+                    <i class="fa-solid fa-bars text-[15px]"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div id="mobileMenu" class="hidden border-t border-gray-200 bg-[#f6f6f6] px-4 py-4 sm:px-5 md:hidden">
+            <nav class="flex flex-col gap-4 text-[13px] font-semibold text-gray-700">
+                <a href="./admin/index.html" class="hover:text-[#358A2F]">Home</a>
+                <a href="./about_us.html" class="hover:text-[#358A2F]">About Us</a>
+                <a href="./diseases.html" class="hover:text-[#358A2F]">Diseases</a>
+                <a href="./crops.html" class="hover:text-[#358A2F]">Crops</a>
+                <a href="./how-it-works.html" class="hover:text-[#358A2F]">How It Works</a>
+                <a href="./articles.html" class="hover:text-[#358A2F]">Articles</a>
+                <a href="./contact.html" class="text-[#1E8211]">Contact</a>
+                <a href="#"
+                    class="mt-1 inline-flex w-fit items-center gap-2 rounded-xl bg-[#2f7d32] px-4 py-2.5 text-[12px] font-semibold text-white sm:hidden">
+                    Login
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="overflow-x-hidden font-['DM_Sans',sans-serif]">
+
+        <!-- hero -->
+        <section class="bg-[#e9f4df36] py-14 sm:py-16 lg:py-18">
+            <div class="mx-auto max-w-250 px-5">
+
+                <p class="text-[11px] font-medium leading-4 text-[#1E8211]">Crop directory</p>
+
+                <h1 class="mt-5 text-[34px] font-bold leading-10 tracking-tight text-black sm:text-[38px]">All crops
+                </h1>
+
+                <p class="mt-4 max-w-lg text-[11px] leading-4 text-gray-700">Get to know your crops. Explore
+                    profiles, common diseases, and plant health guidance.</p>
+            </div>
+        </section>
+
+        <!-- crops list -->
+        <section id="crops" class="bg-white pb-16 pt-9 sm:pb-18">
+            <div class="mx-auto max-w-250 px-5">
+
+                <!-- search and sort -->
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+
+                    <div class="flex h-10 flex-1 items-center rounded-lg border border-gray-300 bg-white px-3.5">
+                        <input type="text" id="cropSearch" placeholder="Search by crop name..."
+                            aria-label="Search crops by name"
+                            class="h-full w-full bg-transparent text-[10px] text-gray-900 outline-none placeholder:text-gray-500">
+                        <i class="fa-solid fa-magnifying-glass text-[11px] text-gray-600"></i>
+                    </div>
+
+                    <div
+                        class="relative flex h-10 items-center rounded-lg border border-gray-300 bg-white px-3.5 sm:w-50">
+                        <span class="text-[12px] text-gray-600">Sort by:</span>
+                        <select id="cropSort" aria-label="Sort crops"
+                            class="h-full w-full cursor-pointer appearance-none bg-transparent pl-1 pr-5 text-[12px] font-medium text-gray-900 outline-none">
+                            <option value="az">Name (A–Z)</option>
+                            <option value="za">Name (Z–A)</option>
+                        </select>
+                        <i
+                            class="fa-solid fa-chevron-down pointer-events-none absolute right-3.5 text-[8px] text-gray-600"></i>
+                    </div>
+                </div>
+
+                <!-- filter chips -->
+                <div class="mt-4 flex flex-wrap items-center gap-2">
+                    <button type="button" data-filter="all"
+                        class="crop-chip h-6.5 rounded-full bg-[#1E8211] px-3.5 text-[10px] font-medium text-white transition">All
+                        crops <span id="countAll">2</span></button>
+                    <button type="button" data-filter="vegetable"
+                        class="crop-chip h-6.5 rounded-full bg-[#e9f4df] px-3.5 text-[10px] font-medium text-gray-900 transition hover:bg-[#d9eccb]">Vegetables
+                        1</button>
+                    <button type="button" data-filter="tuber"
+                        class="crop-chip h-6.5 rounded-full bg-[#e9f4df] px-3.5 text-[10px] font-medium text-gray-900 transition hover:bg-[#d9eccb]">Tuber
+                        crops 1</button>
+                </div>
+
+                <!-- cards -->
+                <div id="cropGrid" class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+                    <!-- pepper -->
+                    <div data-type="vegetable" data-name="pepper"
+                        class="crop-card rounded-xl border border-gray-300 bg-white p-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+
+                        <div class="aspect-184/64 w-full overflow-hidden rounded-lg bg-[#3f201c]">
+                            <img src="../images/pepper-img.png" alt="Pepper" class="h-full w-full object-cover">
+                        </div>
+
+                        <div class="px-0.5 pb-1 pt-3.5">
+                            <span
+                                class="inline-block rounded-full bg-[#e3f2d8] px-2.5 py-2 text-[10px] font-semibold uppercase leading-2 tracking-wide text-[#1E8211]">Vegetable
+                                crop</span>
+
+                            <h3 class="mt-1.5 text-[16px] font-semibold leading-5 text-black">Pepper</h3>
+
+                            <p class="mt-1 text-[10px] font-semibold leading-3 text-gray-700">Common classes: Bacterial
+                                Spot,
+                                Healthy</p>
+
+                            <a href="pepper.html"
+                                class="mt-3 inline-flex h-7 items-center gap-2 rounded-full bg-[#1E8211] px-4 py-4 text-[11px] font-semibold text-white transition hover:bg-[#186b0d]">
+                                Explore Pepper <i class="fa-solid fa-arrow-right text-[7px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- potato -->
+                    <div data-type="tuber" data-name="potato"
+                        class="crop-card rounded-xl border border-gray-300 bg-white p-2.5 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+
+                        <div class="aspect-184/64 w-full overflow-hidden rounded-lg bg-[#3f201c]">
+                            <img src="../images/potato.png" alt="Potato" class="h-full w-full object-cover">
+                        </div>
+
+                        <div class="px-0.5 pb-1 pt-3.5">
+                            <span
+                                class="inline-block rounded-full bg-[#e3f2d8] px-2.5 py-2 text-[10px] font-semibold uppercase leading-2 tracking-wide text-[#1E8211]">Tuber
+                                crop</span>
+
+                            <h3 class="mt-1.5 text-[16px] font-semibold leading-5 text-black">Potato</h3>
+
+                            <p class="mt-1 text-[10px] font-semibold leading-3 text-gray-700">Common classes: Early
+                                Blight, Late
+                                Blight, Healthy</p>
+
+                            <a href="#"
+                                class="mt-3 inline-flex h-7 items-center gap-2 rounded-full bg-[#1E8211] px-4 py-4 text-[11px] font-semibold text-white transition hover:bg-[#186b0d]">
+                                Explore Potato <i class="fa-solid fa-arrow-right text-[7px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- empty message -->
+                <p id="cropEmpty" class="mt-8 hidden text-center text-[12px] text-gray-600">No crops found.</p>
+            </div>
+        </section>
+
+        <!-- cta band -->
+        <section class="bg-[#0f2d12] py-9 sm:py-25">
+            <div class="mx-auto flex max-w-300 flex-col gap-5 px-5 sm:flex-row sm:items-center sm:justify-between">
+
+                <div>
+                    <h2 class="text-[25px] font-semibold leading-5 text-white">A healthier crop starts with a closer
+                        look.</h2>
+                    <p class="mt-2 text-[13px] leading-3 text-white/70">Explore our disease library to learn about
+                        common signs and symptoms.</p>
+                </div>
+
+                <a href="./diseases.html"
+                    class="inline-flex h-8.5 w-fit items-center gap-2.5 rounded-full bg-[#1E8211] px-5 py-3 text-[12px] font-semibold text-white transition hover:bg-[#186b0d]">
+                    Explore disease library <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer id="contact"
+        class="relative min-h-130.5 overflow-hidden bg-[#fdfcf6] font-['DM_Sans',sans-serif] text-[#111]">
+
+        <!-- background image -->
+        <div class="absolute inset-x-0 bottom-0 z-0 h-90 lg:inset-0 lg:h-full">
+            <img src="../images/footer-img.png" alt="Green farmland background"
+                class="h-full w-full object-cover object-bottom">
+
+            <div class="absolute inset-0 lg:hidden"
+                style="background:linear-gradient(to bottom,#fdfcf6 0%,rgba(253,252,246,0.7) 35%,rgba(253,252,246,0) 75%);">
+            </div>
+
+            <div class="absolute inset-0 hidden lg:block"
+                style="background:linear-gradient(to bottom,#fdfcf6 0%,rgba(253,252,246,0.92) 30%,rgba(253,252,246,0.4) 52%,rgba(253,252,246,0) 63%);">
+            </div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-302.5 px-5 pb-55 pt-24 lg:px-8 lg:pb-40 xl:px-0">
+
+            <div
+                class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] xl:grid-cols-[621px_202px_202px_1fr] xl:gap-x-0">
+
+                <!-- logo and social -->
+                <div class="col-span-2 sm:col-span-3 lg:col-span-1">
+
+                    <a href="./all-crops.html" class="inline-block">
+                        <img src="../images/navlogo.png" alt="Agri Vision" class="h-14 w-auto">
+                    </a>
+
+                    <p class="mt-5 max-w-87.5 text-[14px] leading-6 text-[#111]">
+                        Empowering farmers with smart insights for healthier crops and a more sustainable future
+                    </p>
+
+                    <div class="mt-4 flex items-center gap-2">
+                        <a href="#" aria-label="Facebook"
+                            class="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[12px] text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram"
+                            class="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[12px] text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Google"
+                            class="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[12px] text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                    </div>
+
+                    <p class="mt-6 text-[13px] leading-6 text-[#111]">© 2026 <a href="./all-crops.html"
+                            class="hover:text-[#8dc63f]">Agri Vision.</a></p>
+                </div>
+
+                <!-- platform -->
+                <div>
+                    <h4 class="text-[18px] font-semibold leading-none text-[#111]">Platform</h4>
+                    <ul class="mt-6 space-y-4 text-[13px] leading-5 text-[#111]">
+                        <li><a href="./admin/index.html" class="transition hover:text-[#358A2F]">Home</a></li>
+                        <li><a href="./about_us.html" class="transition hover:text-[#358A2F]">About Us</a></li>
+                        <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Explore Crops</a></li>
+                        <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
+                        <li><a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How it works</a></li>
+                        <li><a href="./admin/index.html" class="transition hover:text-[#358A2F]">AI Plant
+                                Analysis</a></li>
+                    </ul>
+                </div>
+
+                <!-- resources -->
+                <div>
+                    <h4 class="text-[18px] font-semibold leading-none text-[#111]">Resources</h4>
+                    <ul class="mt-6 space-y-4 text-[13px] leading-5 text-[#111]">
+                        <li><a href="./admin/index.html#analysis" class="transition hover:text-[#358A2F]">Analyse
+                                Plant</a></li>
+                        <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Disease Library</a></li>
+                        <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Crop Knowledge</a></li>
+                        <li><a href="./contact.html" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- legal -->
+                <div>
+                    <h4 class="text-[18px] font-semibold leading-none text-[#111]">Legal</h4>
+                    <ul class="mt-6 space-y-4 text-[13px] leading-5 text-[#111]">
+                        <li><a href="#" class="transition hover:text-[#358A2F]">Privacy Policy</a></li>
+                        <li><a href="#" class="transition hover:text-[#358A2F]">Terms of Use</a></li>
+                        <li><a href="#" class="transition hover:text-[#358A2F]">Cookie Policy</a></li>
+                        <li><a href="#" class="transition hover:text-[#358A2F]">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

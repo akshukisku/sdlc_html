@@ -1,325 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Agri Vision – Spot Plant Disease Before They Spread</title>
-<link rel="stylesheet" href="../dist/output.css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
-        colors: {
-          brand: { 50: '#EEF7E6', 100: '#C9EDC9', 200: '#A9D3B5', 500: '#4C9A2A', 600: '#2E8B2E', 700: '#2B7A2F', 800: '#1F6B2A' },
-        },
-      },
-    },
-  };
-</script>
- <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseases | Agri Vision</title>
 
+  <link rel="stylesheet" href="../dist/output.css" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
-<body class="bg-white font-sans text-neutral-900 antialiased">
 
-<!-- NAVBAR -->
-<header class="bg-white/90 backdrop-blur sticky top-0 z-50 border-b border-neutral-100">
-  <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-    <a href="#" class="flex items-center gap-1 text-xl font-bold text-brand-500">
-      <svg class="h-8 w-8 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c-4-3-7-6-7-10 3 0 6 2 7 5 1-3 4-5 7-5 0 4-3 7-7 10Z"/><path d="M12 8c0-2 1-4 3-5"/></svg>
-      Agri Vision
-    </a>
-    <nav class="hidden items-center gap-8 text-xs font-semibold md:flex">
-      <a href="#" class="hover:text-brand-700">Home</a>
-      <a href="#" class="flex items-center gap-1 hover:text-brand-700">About Us
-        <svg class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path d="M5 7l5 6 5-6H5Z"/></svg></a>
-      <a href="#diseases" class="hover:text-brand-700">Diseases</a>
-      <a href="#" class="hover:text-brand-700">Crops</a>
-      <a href="#how" class="hover:text-brand-700">How It Works</a>
-      <a href="#" class="hover:text-brand-700">Articles</a>
-    </nav>
-    <a href="#" class="inline-flex items-center gap-2 rounded-lg bg-brand-800 px-4 py-2 text-xs font-semibold text-white hover:bg-brand-700">
-      Login <span aria-hidden="true">→</span>
-    </a>
-  </div>
-</header>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
-<!-- HERO -->
-<section class="relative overflow-hidden bg-gradient-to-r from-brand-200 via-[#6BAA75] to-[#D9EBDD]">
-  <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:grid-cols-2 md:py-28">
-    <div>
-      <h1 class="text-5xl font-semibold leading-tight tracking-tight md:text-6xl">
-        Spot Plant Disease<br />
-        <span class="text-brand-600">Before They Spread</span>
-      </h1>
-      <p class="mt-6 max-w-lg text-lg leading-snug text-neutral-900">
-        AGRI-VISION is an AI-powered agricultural platform that helps farmers and plant lovers identify plant diseases.
-      </p>
-      <a href="#diseases" class="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-800 px-4 py-2.5 text-xs font-semibold text-white hover:bg-brand-700">
-        Explore Our Platform <span aria-hidden="true">→</span>
+  <!-- navbar -->
+  <header class="relative z-30 w-full bg-white font-['DM_Sans',sans-serif] shadow-[0_1px_0_rgba(0,0,0,0.06)]">
+
+    <div class="mx-auto grid h-18 w-full max-w-250 grid-cols-[1fr_auto] items-center px-3 sm:px-5 md:grid-cols-[1fr_auto_1fr]">
+
+      <!-- logo -->
+      <a href="./diseases.html" class="shrink-0 justify-self-start">
+        <img src="../images/navlogo.png" alt="Agri Vision" class="h-9 w-auto sm:h-11">
       </a>
+
+      <!-- links (desktop) -->
+      <nav class="hidden items-center gap-5 text-[12px] font-semibold leading-none text-black md:flex lg:gap-8">
+
+        <a href="./admin/index.html" class="transition hover:text-[#358A2F]">Home</a>
+
+        <a href="./about_us.html" class="flex items-center gap-1 transition hover:text-[#358A2F]">
+          About Us
+          <i class="fa-solid fa-chevron-down text-[8px]"></i>
+        </a>
+
+        <a href="./diseases.html"
+          class="relative py-2 text-[#358A2F] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#6dbe45]">Diseases</a>
+
+        <a href="./crops.html" class="transition hover:text-[#358A2F]">Crops</a>
+
+        <a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How It Works</a>
+
+        <a href="./articles.html" class="transition hover:text-[#358A2F]">Articles</a>
+
+        <a href="./contact.html" class="transition hover:text-[#358A2F]">Contact</a>
+
+      </nav>
+
+      <!-- login button and menu icon -->
+      <div class="flex items-center justify-end gap-3">
+
+        <a href="#"
+          class="group hidden h-11 items-center gap-4 rounded-full bg-[#1f5a2b] pl-6 pr-1.5 text-[13px] font-medium text-white transition hover:bg-[#184a23] sm:flex">
+          Login
+          <span
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#d4f56b] text-[#1f5a2b] transition group-hover:translate-x-0.5">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </span>
+        </a>
+
+        <button id="menuBtn"
+          class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 text-black md:hidden"
+          type="button">
+          <i class="fa-solid fa-bars text-[15px]"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- Orbit graphic -->
-    <div class="relative mx-auto hidden aspect-square w-full max-w-md md:block">
-      <div class="absolute inset-[8%] rounded-full border-2 border-white/80"></div>
-      <div class="absolute inset-[14%] rounded-full border-2 border-white/90 bg-gradient-to-br from-brand-200/60 to-brand-500/30 shadow-inner"></div>
-      <span class="absolute left-0 top-0 grid h-16 w-16 place-items-center rounded-full bg-white shadow-lg text-brand-700">
-        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4-3-7-6-7-10 3 0 6 2 7 5 1-3 4-5 7-5 0 4-3 7-7 10Z"/></svg>
-      </span>
-      <span class="absolute right-0 top-0 grid h-16 w-16 place-items-center rounded-full bg-white shadow-lg text-brand-700">
-        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/></svg>
-      </span>
-      <span class="absolute bottom-0 left-4 grid h-16 w-16 place-items-center rounded-full bg-white shadow-lg text-brand-700 text-sm font-bold">AI</span>
-      <span class="absolute bottom-0 right-0 grid h-16 w-16 place-items-center rounded-full bg-white shadow-lg text-brand-700">
-        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h6"/><circle cx="16" cy="16" r="4"/><path d="m19 19 3 3"/></svg>
-      </span>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white px-5 py-4 md:hidden">
+      <nav class="flex flex-col gap-4 text-[13px] font-semibold text-gray-700">
+        <a href="./admin/index.html" class="hover:text-[#358A2F]">Home</a>
+        <a href="./about_us.html" class="hover:text-[#358A2F]">About Us</a>
+        <a href="./diseases.html" class="hover:text-[#358A2F]">Diseases</a>
+        <a href="./crops.html" class="hover:text-[#358A2F]">Crops</a>
+        <a href="./how-it-works.html" class="hover:text-[#358A2F]">How It Works</a>
+        <a href="./articles.html" class="hover:text-[#358A2F]">Articles</a>
+        <a href="./contact.html" class="hover:text-[#358A2F]">Contact</a>
+        <a href="#"
+          class="mt-1 inline-flex w-fit items-center gap-2 rounded-lg bg-[#2f7d32] px-4 py-2.5 text-[12px] font-semibold text-white sm:hidden">
+          Login
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- DISEASE LIBRARY -->
-<section id="diseases" class="mx-auto max-w-6xl px-4 py-16">
-  <div class="text-center">
-    <div class="flex items-center justify-center gap-3 text-lg text-brand-700">
-      <span class="h-px w-14 bg-brand-700"></span>Disease Library<span class="h-px w-14 bg-brand-700"></span>
-    </div>
-    <h2 class="mt-2 text-3xl font-bold md:text-4xl">Identify What Is <span class="text-brand-600">Affecting Your Crop</span></h2>
-  </div>
+  <main class="overflow-x-hidden">
 
-  <!-- Search + filters -->
-  <div class="mt-8 flex flex-col gap-2 rounded-lg bg-brand-50 p-2 md:flex-row">
-    <label class="flex flex-1 items-center gap-2 rounded-md bg-white px-3 py-2.5">
-      <svg class="h-4 w-4 text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input type="search" placeholder="Search Crops, Diseases, Or Tips...." class="w-full text-xs outline-none placeholder:text-neutral-600" />
-    </label>
-    <div class="grid flex-[1.6] grid-cols-4 gap-2 text-xs">
-      <button class="rounded-md bg-brand-600 py-2.5 font-medium text-white">All</button>
-      <button class="rounded-md bg-white py-2.5 font-medium text-brand-700 hover:bg-brand-100">Fungal</button>
-      <button class="rounded-md bg-white py-2.5 font-medium text-brand-700 hover:bg-brand-100">Bacterial</button>
-      <button class="rounded-md bg-white py-2.5 font-medium text-brand-700 hover:bg-brand-100">Viral</button>
-    </div>
-  </div>
+    <!-- hero -->
+    <section
+      class="relative overflow-hidden bg-linear-to-r from-[#D9EBDD] via-[#6BAA75] to-[#D9EBDD] font-['DM_Sans',sans-serif]">
+      <div class="mx-auto grid max-w-250 items-center gap-8 px-3 py-10 sm:gap-10 sm:px-5 sm:py-14 md:grid-cols-2 md:py-20">
 
-  <!-- Cards (horizontal scroll) -->
-  <div class="mt-6 flex snap-x gap-6 overflow-x-auto pb-4">
-    <!-- card -->
-    <article class="relative min-h-[240px] w-72 shrink-0 snap-start overflow-hidden rounded-2xl bg-gradient-to-br from-white to-brand-200 p-5 pl-28">
-      <div class="absolute -left-4 top-4 h-40 w-32 -rotate-12 rounded-[60%_40%_60%_40%] bg-gradient-to-br from-yellow-400 to-brand-600" aria-hidden="true"></div>
-      <span class="rounded bg-white px-2 py-0.5 text-[9px] text-red-700">Bacterial</span>
-      <h3 class="mt-2 text-lg font-semibold leading-tight">Bacterial Leaf Spot</h3>
-      <p class="mt-3 flex items-center gap-2 text-sm text-neutral-600"><span>🍅</span>Tomato</p>
-      <p class="mt-2 text-[10px] leading-snug text-neutral-600">Small, water soaked spots that enlarge and turn brown.</p>
-      <a href="#" class="mt-3 inline-flex items-center gap-2 rounded-lg bg-brand-800 px-4 py-2 text-[11px] font-semibold text-white hover:bg-brand-700">Explore Now →</a>
-    </article>
-
-    <article class="relative min-h-[240px] w-72 shrink-0 snap-start overflow-hidden rounded-2xl bg-gradient-to-br from-white to-brand-200 p-5 pl-28">
-      <div class="absolute -left-4 top-4 h-40 w-32 -rotate-12 rounded-[60%_40%_60%_40%] bg-gradient-to-br from-amber-800 to-brand-600" aria-hidden="true"></div>
-      <span class="rounded bg-white px-2 py-0.5 text-[9px] text-red-700">Oomycete</span>
-      <h3 class="mt-2 text-lg font-semibold leading-tight">Late Bright Leaf</h3>
-      <p class="mt-3 flex items-center gap-2 text-sm text-neutral-600"><span>🥔</span>Potato</p>
-      <p class="mt-2 text-[10px] leading-snug text-neutral-600">Small, water soaked spots that enlarge and turn brown.</p>
-      <a href="#" class="mt-3 inline-flex items-center gap-2 rounded-lg bg-brand-800 px-4 py-2 text-[11px] font-semibold text-white hover:bg-brand-700">Explore Now →</a>
-    </article>
-
-    <article class="relative min-h-[240px] w-72 shrink-0 snap-start overflow-hidden rounded-2xl bg-gradient-to-br from-white to-brand-200 p-5 pl-28">
-      <div class="absolute -left-4 top-4 h-40 w-32 -rotate-12 rounded-[60%_40%_60%_40%] bg-gradient-to-br from-orange-500 to-brand-600" aria-hidden="true"></div>
-      <span class="rounded bg-white px-2 py-0.5 text-[9px] text-red-700">Fungal</span>
-      <h3 class="mt-2 text-lg font-semibold leading-tight">Rust</h3>
-      <p class="mt-3 flex items-center gap-2 text-sm text-neutral-600"><span>🌾</span>Wheat</p>
-      <p class="mt-2 text-[10px] leading-snug text-neutral-600">Small, water soaked spots that enlarge and turn brown.</p>
-      <a href="#" class="mt-3 inline-flex items-center gap-2 rounded-lg bg-brand-800 px-4 py-2 text-[11px] font-semibold text-white hover:bg-brand-700">Explore Now →</a>
-    </article>
-  </div>
-</section>
-
-<!-- HOW TO IDENTIFY -->
-<section id="how" class="mx-auto max-w-6xl px-4 py-16">
-  <div class="text-center">
-    <div class="flex items-center justify-center gap-3 text-lg text-brand-700">
-      <span class="h-px w-14 bg-brand-700"></span>How To Identify<span class="h-px w-14 bg-brand-700"></span>
-    </div>
-    <h2 class="mt-2 text-3xl font-bold md:text-4xl"><span class="text-brand-600">Three Steps</span> To Check Your Plant</h2>
-  </div>
-
-  <div class="mt-10 grid gap-10 md:grid-cols-3">
-    <div class="text-center">
-      <span class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand-700 text-white">
-        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.5"/><path d="m4 17 5-5 4 4 3-3 4 4"/></svg>
-      </span>
-      <div class="mt-3 bg-brand-100 py-3 font-semibold [clip-path:polygon(0_0,92%_0,100%_50%,92%_100%,0_100%,8%_50%)]">Uplode Image</div>
-      <p class="mx-auto mt-4 max-w-[17rem] text-xs text-neutral-600">Check leaves, stems and fruit for spots, colour changes, coatings or wilting.</p>
-    </div>
-    <div class="text-center">
-      <span class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand-700 text-sm font-bold text-white">AI</span>
-      <div class="mt-3 bg-brand-100 py-3 font-semibold [clip-path:polygon(0_0,92%_0,100%_50%,92%_100%,0_100%,8%_50%)]">AI Analysis</div>
-      <p class="mx-auto mt-4 max-w-[17rem] text-xs text-neutral-600">Check leaves, stems and fruit for spots, colour changes, coatings or wilting.</p>
-    </div>
-    <div class="text-center">
-      <span class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand-700 text-white">
-        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
-      </span>
-      <div class="mt-3 bg-brand-100 py-3 font-semibold [clip-path:polygon(0_0,92%_0,100%_50%,92%_100%,0_100%,8%_50%)]">Take Action</div>
-      <p class="mx-auto mt-4 max-w-[17rem] text-xs text-neutral-600">Check leaves, stems and fruit for spots, colour changes, coatings or wilting.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WHY AGRI VISION -->
-<section class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-[1.1fr_1fr]">
-  <!-- Replace the src with your own photo -->
-  <img src="/sdlc_html/images/disease w png.png"
-       alt="Farmer scanning a crop leaf with a phone"
-       class="h-72 w-full rounded-2xl object-cover shadow-lg md:h-80" />
-  <div>
-    <div class="flex items-center gap-3 text-lg text-brand-700">Why Agri Vision <span class="h-px w-24 bg-brand-700"></span></div>
-    <h2 class="mt-4 text-3xl font-bold leading-tight md:text-4xl"><span class="text-brand-600">Prevention</span> Is Better Then Cure</h2>
-    <ul class="mt-5 space-y-3 text-sm text-neutral-600">
-      <li class="flex items-center gap-3"><svg class="h-5 w-5 shrink-0 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Works with just a phone camera, no special equipment.</li>
-      <li class="flex items-center gap-3"><svg class="h-5 w-5 shrink-0 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Clear, practical advice in simple language.</li>
-      <li class="flex items-center gap-3"><svg class="h-5 w-5 shrink-0 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Fast results, so you can act while there is still time.</li>
-      <li class="flex items-center gap-3"><svg class="h-5 w-5 shrink-0 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Your scan history stays saved and easy to revisit.</li>
-    </ul>
-    <a href="#" class="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-800 px-4 py-2.5 text-xs font-semibold text-white hover:bg-brand-700">Explore Features →</a>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="mx-auto max-w-6xl px-4 py-10">
-  <div class="rounded-3xl bg-brand-700 px-6 py-12 text-center text-white">
-    <h2 class="text-3xl font-semibold md:text-4xl">Found something unusual on a leaf?</h2>
-    <p class="mx-auto mt-3 max-w-sm text-xs">Scan it with Agri Vision and get quick disease insights with suggested next steps.</p>
-    <a href="#" class="mt-4 inline-block rounded-md bg-white px-5 py-2 text-[11px] font-medium text-brand-700 hover:bg-brand-50">Try Disease Identification</a>
-  </div>
-</section>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer id="contact"
-        class="relative min-h-130.5 overflow-hidden bg-[#fdfcf6] font-['DM_Sans',sans-serif] text-[#111]">
-
-        <!-- Background-->
-        <div class="absolute inset-x-0 bottom-0 z-0 h-90 lg:inset-0 lg:h-full">
-            <img src="../about_images/footer-img.png" alt="Green farmland background"
-                class="h-full w-full object-cover object-bottom">
-
-            <!-- Fade overlay-->
-            <div class="absolute inset-0 lg:hidden"
-                style="background:linear-gradient(to bottom,#fdfcf6 0%,rgba(253,252,246,0.7) 35%,rgba(253,252,246,0) 75%);">
-            </div>
-
-            <!-- Fade overlay-->
-            <div class="absolute inset-0 hidden lg:block"
-                style="background:linear-gradient(to bottom,#fdfcf6 0%,rgba(253,252,246,0.92) 30%,rgba(253,252,246,0.4) 52%,rgba(253,252,246,0) 63%);">
-            </div>
+        <!-- left text -->
+        <div class="min-w-0">
+          <h1 class="text-[34px] font-semibold leading-tight tracking-tight text-black sm:text-[42px] md:text-[44px]">
+            Spot Plant Disease<br />
+            <span class="text-[#358A2F]">Before They Spread</span>
+          </h1>
+          <p class="mt-5 max-w-md text-[13px] leading-5 text-neutral-900">
+            AGRI-VISION is an AI-powered agricultural platform that helps farmers and plant lovers
+            identify plant diseases.
+          </p>
+          <a href="./diseases.html"
+            class="mt-6 inline-flex h-9 items-center gap-2 rounded-lg bg-[#2f6f2c] px-4 text-[11px] font-semibold text-white transition hover:bg-[#245a22]">
+            Explore Our Platform <i class="fa-solid fa-arrow-right text-[9px]"></i>
+          </a>
         </div>
 
-        <!-- Content -->
-        <div class="relative z-10 mx-auto max-w-302.5 px-4 pb-48 pt-14 sm:px-5 sm:pt-20 lg:px-8 lg:pb-40 lg:pt-40 xl:px-0">
+        <!-- right side graphic -->
+        <div class="relative mx-auto aspect-405/334 w-full max-w-[20rem] sm:max-w-md lg:ml-auto lg:mr-0 lg:max-w-140">
 
+          <div class="absolute inset-0"
+            style="background:radial-gradient(circle at 45% 51.5%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.1) 8%, rgba(255,255,255,0) 30%);">
+          </div>
+
+          <div
+            class="absolute left-[45.2%] top-[51.5%] aspect-square w-[65.7%] -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-white">
+          </div>
+
+          <div
+            class="absolute left-[45.2%] top-[51.5%] aspect-square w-[56.3%] -translate-x-1/2 -translate-y-1/2 rounded-full border-[1.5px] border-white">
+            <img src="../images/disease-banner_img.png" alt="">
+          </div>
+
+          <div
+            class="absolute left-[12.3%] top-[18.6%] flex aspect-square w-[12.8%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md">
+            <img src="../images/natural-food.svg" alt="" class="h-auto w-5 sm:w-10 md:w-12 lg:w-10">
+          </div>
+
+          <div
+            class="absolute left-[80.7%] top-[18.6%] flex aspect-square w-[12.8%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md">
+            <img src="../images/scan-search.svg" alt="" class="h-auto w-5 sm:w-10 md:w-12 lg:w-10">
+          </div>
+
+          <div
+            class="absolute left-[13.8%] top-[86%] flex aspect-square w-[12.8%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md">
+            <img src="../images/artificial-intelligence-04.svg" alt="" class="h-auto w-5 sm:w-10 md:w-12 lg:w-10">
+          </div>
+
+          <div
+            class="absolute left-[80.7%] top-[86%] flex aspect-square w-[12.8%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md">
+            <img src="../images/search-list-01.svg" alt="" class="h-auto w-5 sm:w-10 md:w-12 lg:w-10">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- disease library -->
+    <section id="disease-library" class="overflow-x-hidden bg-white py-12 font-['DM_Sans',sans-serif] lg:py-16">
+
+      <div class="mx-auto max-w-300 px-3 sm:px-5">
+
+        <!-- heading -->
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-3">
+            <div class="hidden h-px w-12 bg-gray-700 sm:block"></div>
+            <span class="text-[13px] font-medium leading-5 text-[#1E8211]">Disease Library</span>
+            <div class="hidden h-px w-12 bg-gray-700 sm:block"></div>
+          </div>
+
+          <h2 class="mt-1.5 text-[26px] font-bold leading-[1.2] text-black sm:text-[32px]">
+            Identify What Is <span class="text-[#358A2F]">Affecting Your Crop</span>
+          </h2>
+        </div>
+
+        <!-- search and filter bar -->
+        <div class="mt-8 flex flex-col gap-3 rounded-xl bg-[#eaf5c9] p-1.5 sm:flex-row sm:items-center sm:gap-0">
+
+          <div class="flex h-8 min-w-0 flex-1 items-center gap-2 rounded-lg bg-white px-3 sm:max-w-70">
+            <i class="fa-solid fa-magnifying-glass text-[10px] text-gray-500"></i>
+            <input type="text" id="diseaseSearch" placeholder="Search Name, Disease & Tips..."
+              aria-label="Search diseases"
+              class="h-full w-full min-w-0 bg-transparent text-[10px] text-gray-900 outline-none placeholder:text-gray-500">
+          </div>
+
+          <div class="grid flex-1 grid-cols-4 gap-1.5 sm:ml-3 sm:gap-2">
+            <button type="button" data-filter="all"
+              class="filter-btn h-8 rounded-lg bg-[#2f7d32] text-[10px] font-semibold text-white transition">All</button>
+            <button type="button" data-filter="fungal"
+              class="filter-btn h-8 rounded-lg bg-white/70 text-[10px] font-semibold text-gray-800 transition">Fungal</button>
+            <button type="button" data-filter="bacterial"
+              class="filter-btn h-8 rounded-lg bg-white/70 text-[10px] font-semibold text-gray-800 transition">Bacterial</button>
+            <button type="button" data-filter="viral"
+              class="filter-btn h-8 rounded-lg bg-white/70 text-[10px] font-semibold text-gray-800 transition">Viral</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- slider -->
+      <div class="relative mx-auto mt-6 max-w-300">
+
+        <div id="diseaseTrack"
+          class="flex snap-x snap-mandatory gap-8 overflow-x-auto scroll-smooth scroll-pl-4 py-6 pl-4 pr-4 [scrollbar-none] [&::-webkit-scrollbar]:hidden sm:gap-14 sm:scroll-pl-6 sm:pl-6 sm:pr-6">
+
+          <!-- card 1 -->
+          <div data-type="bacterial" data-name="bacterial leaf spot tomato"
+            class="dis-card relative h-62 w-68 shrink-0 snap-start rounded-[20px] bg-linear-to-br from-[#f4fbf2] via-[#e2f3de] to-[#a6d4a0] shadow-[0_8px_24px_rgba(0,0,0,0.07)]">
+
+            <img src="../images/leaf-diseased.png" alt="Bacterial leaf spot on tomato leaf" draggable="false"
+              class="pointer-events-none absolute -left-6 top-1/2 h-45 w-40 -translate-y-1/2 object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.25)]">
+
+            <div class="absolute inset-y-0 left-32 right-5 flex flex-col justify-center">
+              <span
+                class="w-fit rounded-full border border-[#e8a3ab] bg-[#fdecee] px-2 py-0.5 text-[10px] font-medium leading-3 text-[#b4232f]">Bacterial</span>
+              <h3 class="mt-2 text-[17px] font-bold leading-5 text-[#1d3a22]">Bacterial Leaf Spot</h3>
+              <div class="mt-2.5 flex items-center gap-2">
+                <span class="text-[17px] leading-none">🍅</span>
+                <span class="text-[14px] font-medium leading-5 text-[#2f5a33]">Tomato</span>
+              </div>
+              <p class="mt-2 text-[10.5px] leading-3.5 text-[#4a5b4c]">Small , water soaked spots that
+                enlarge and turn brown.</p>
+              <a href="#"
+                class="mt-3 inline-flex h-9 w-fit items-center gap-2 rounded-lg bg-[#1f5a2b] px-5 text-[11px] font-semibold text-white transition hover:bg-[#184a23]">
+                Explore Now <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div data-type="fungal" data-name="late bright leaf potato"
+            class="dis-card relative h-62 w-68 shrink-0 snap-start rounded-[20px] bg-linear-to-br from-[#f4fbf2] via-[#e2f3de] to-[#a6d4a0] shadow-[0_8px_24px_rgba(0,0,0,0.07)]">
+
+            <img src="../images/late-leaf.png" alt="Late blight on potato leaf" draggable="false"
+              class="pointer-events-none absolute -left-6 top-1/2 h-45 w-40 -translate-y-1/2 object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.25)]">
+
+            <div class="absolute inset-y-0 left-32 right-5 flex flex-col justify-center">
+              <span
+                class="w-fit rounded-full border border-[#e8a3ab] bg-[#fdecee] px-2 py-0.5 text-[10px] font-medium leading-3 text-[#b4232f]">Oomycete</span>
+              <h3 class="mt-2 text-[17px] font-bold leading-5 text-[#1d3a22]">Late Bright Leaf</h3>
+              <div class="mt-2.5 flex items-center gap-2">
+                <span class="text-[17px] leading-none">🥔</span>
+                <span class="text-[14px] font-medium leading-5 text-[#2f5a33]">Potato</span>
+              </div>
+              <p class="mt-2 text-[10.5px] leading-3.5 text-[#4a5b4c]">Small , water soaked spots that
+                enlarge and turn brown.</p>
+              <a href="#"
+                class="mt-3 inline-flex h-9 w-fit items-center gap-2 rounded-lg bg-[#1f5a2b] px-5 text-[11px] font-semibold text-white transition hover:bg-[#184a23]">
+                Explore Now <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div data-type="fungal" data-name="rust wheat"
+            class="dis-card relative h-62 w-68 shrink-0 snap-start rounded-[20px] bg-linear-to-br from-[#f4fbf2] via-[#e2f3de] to-[#a6d4a0] shadow-[0_8px_24px_rgba(0,0,0,0.07)]">
+
+            <img src="../images/rust.png" alt="Rust on wheat leaf" draggable="false"
+              class="pointer-events-none absolute -left-6 top-1/2 h-45 w-40 -translate-y-1/2 object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.25)]">
+
+            <div class="absolute inset-y-0 left-32 right-5 flex flex-col justify-center">
+              <span
+                class="w-fit rounded-full border border-[#e8a3ab] bg-[#fdecee] px-2 py-0.5 text-[10px] font-medium leading-3 text-[#b4232f]">Fungal</span>
+              <h3 class="mt-2 text-[17px] font-bold leading-5 text-[#1d3a22]">Rust</h3>
+              <div class="mt-2.5 flex items-center gap-2">
+                <span class="text-[17px] leading-none">🌾</span>
+                <span class="text-[14px] font-medium leading-5 text-[#2f5a33]">Wheat</span>
+              </div>
+              <p class="mt-2 text-[10.5px] leading-3.5 text-[#4a5b4c]">Small , water soaked spots that
+                enlarge and turn brown.</p>
+              <a href="#"
+                class="mt-3 inline-flex h-9 w-fit items-center gap-2 rounded-lg bg-[#1f5a2b] px-5 text-[11px] font-semibold text-white transition hover:bg-[#184a23]">
+                Explore Now <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div data-type="fungal" data-name="early blight tomato"
+            class="dis-card relative h-62 w-68 shrink-0 snap-start rounded-[20px] bg-linear-to-br from-[#f4fbf2] via-[#e2f3de] to-[#a6d4a0] shadow-[0_8px_24px_rgba(0,0,0,0.07)]">
+
+            <img src="../images/leaf-diseased.png" alt="Early blight on tomato leaf" draggable="false"
+              class="pointer-events-none absolute -left-6 top-1/2 h-45 w-40 -translate-y-1/2 object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.25)]">
+
+            <div class="absolute inset-y-0 left-32 right-5 flex flex-col justify-center">
+              <span
+                class="w-fit rounded-full border border-[#e8a3ab] bg-[#fdecee] px-2 py-0.5 text-[10px] font-medium leading-3 text-[#b4232f]">Fungal</span>
+              <h3 class="mt-2 text-[17px] font-bold leading-5 text-[#1d3a22]">Early Blight</h3>
+              <div class="mt-2.5 flex items-center gap-2">
+                <span class="text-[17px] leading-none">🍅</span>
+                <span class="text-[14px] font-medium leading-5 text-[#2f5a33]">Tomato</span>
+              </div>
+              <p class="mt-2 text-[10.5px] leading-3.5 text-[#4a5b4c]">Small , water soaked spots that
+                enlarge and turn brown.</p>
+              <a href="#"
+                class="mt-3 inline-flex h-9 w-fit items-center gap-2 rounded-lg bg-[#1f5a2b] px-5 text-[11px] font-semibold text-white transition hover:bg-[#184a23]">
+                Explore Now <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card 5 -->
+          <div data-type="viral" data-name="mosaic virus tomato"
+            class="dis-card relative h-62 w-68 shrink-0 snap-start rounded-[20px] bg-linear-to-br from-[#f4fbf2] via-[#e2f3de] to-[#a6d4a0] shadow-[0_8px_24px_rgba(0,0,0,0.07)]">
+
+            <img src="../images/late-leaf.png" alt="Mosaic virus on tomato leaf" draggable="false"
+              class="pointer-events-none absolute -left-6 top-1/2 h-45 w-40 -translate-y-1/2 object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.25)]">
+
+            <div class="absolute inset-y-0 left-32 right-5 flex flex-col justify-center">
+              <span
+                class="w-fit rounded-full border border-[#e8a3ab] bg-[#fdecee] px-2 py-0.5 text-[10px] font-medium leading-3 text-[#b4232f]">Viral</span>
+              <h3 class="mt-2 text-[17px] font-bold leading-5 text-[#1d3a22]">Mosaic Virus</h3>
+              <div class="mt-2.5 flex items-center gap-2">
+                <span class="text-[17px] leading-none">🍅</span>
+                <span class="text-[14px] font-medium leading-5 text-[#2f5a33]">Tomato</span>
+              </div>
+              <p class="mt-2 text-[10.5px] leading-3.5 text-[#4a5b4c]">Small , water soaked spots that
+                enlarge and turn brown.</p>
+              <a href="#"
+                class="mt-3 inline-flex h-9 w-fit items-center gap-2 rounded-lg bg-[#1f5a2b] px-5 text-[11px] font-semibold text-white transition hover:bg-[#184a23]">
+                Explore Now <i class="fa-solid fa-arrow-right text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- right side white fade -->
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-linear-to-l from-white via-white/80 to-transparent sm:w-24">
+        </div>
+      </div>
+    </section>
+
+    <!-- three steps -->
+    <section id="steps" class="overflow-x-hidden bg-white py-12 font-['DM_Sans',sans-serif] lg:py-16">
+
+      <div class="mx-auto max-w-300 px-3 sm:px-5">
+
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-3">
+            <div class="hidden h-px w-12 bg-[#1E8211] sm:block"></div>
+            <span class="text-[13px] font-semibold leading-5 text-[#1E8211]">How To Identify</span>
+            <div class="hidden h-px w-12 bg-[#1E8211] sm:block"></div>
+          </div>
+
+          <h2 class="mt-1.5 text-[26px] font-bold leading-[1.2] text-black sm:text-[32px]">
+            <span class="text-[#358A2F]">Three Steps</span> To Check Your Plant
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-10 md:grid-cols-3 md:gap-4">
+
+          <!-- step 1 -->
+          <div class="flex flex-col items-center text-center">
+            <span
+              class="relative z-10 grid h-12 w-12 place-items-center rounded-full bg-[#2f7d32] text-white shadow-md">
+              <img src="../images/upload-img.svg" alt="" class="w-6 h-6">
+            </span>
             <div
-                class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] xl:grid-cols-[621px_202px_202px_1fr] xl:gap-x-0">
-
-                <!-- Brand -->
-                <div class="col-span-2 mt-0 sm:col-span-3 lg:col-span-1 lg:mt-2.5">
-
-                    <a href="../index.html" class="inline-block">
-                        <img src="../about_images/navlogo.png" alt="Agri Vision" class="h-12 w-auto sm:h-14">
-                    </a>
-
-                    <p class="mt-4 max-w-87.5 text-[14px] leading-6.5 text-[#111] sm:mt-5.75 sm:text-[15px] sm:leading-[28.5px]">
-                        Empowering farmers with smart insights for healthier crops and a more sustainable future
-                    </p>
-
-                    <!-- Social links -->
-                    <div class="mt-4.25 flex items-center gap-2">
-
-                        <a href="#" aria-label="Facebook"
-                            class="flex h-8.25 w-8.25 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
-                            <svg class="h-3.75 w-3.75" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                            </svg>
-                        </a>
-
-                        <a href="#" aria-label="Instagram"
-                            class="flex h-8.25 w-8.25 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
-                            <svg class="h-3.75 w-3.75" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="5" />
-                                <circle cx="12" cy="12" r="4" />
-                                <path d="M17.5 6.5h.01" />
-                            </svg>
-                        </a>
-
-                        <a href="#" aria-label="Google"
-                            class="flex h-8.25 w-8.25 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
-                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="9.5" />
-                                <path d="M15.8 9.6A4.6 4.6 0 1 0 16.4 13H12" />
-                            </svg>
-                        </a>
-                    </div>
-
-                    <p class="ml-2.25 mt-6 text-[14px] leading-6 text-[#111] sm:mt-7.75">© 2026 <a
-                            href="./about_us.html" target="_self" class="hover:text-[#8dc63f]">Agri Vision.</a></p>
-                </div>
-
-                <!-- Platform -->
-                <div>
-                    <h4
-                        class="flex h-10 items-center text-[18px] font-semibold leading-none text-[#111] sm:text-[20px] lg:text-[22px]">
-                        Platform</h4>
-                    <ul class="mt-4 space-y-4 text-[14px] leading-5 text-[#111] sm:mt-5.5 sm:space-y-6">
-                        <li><a href="../index.html" target="_self" class="transition hover:text-[#358A2F]">Home</a></li>
-                        <li><a href="#about" class="transition hover:text-[#358A2F]">About Us</a></li>
-                        <li><a href="#crops" class="transition hover:text-[#358A2F]">Explore Crops</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
-                        <li><a href="#works" class="transition hover:text-[#358A2F]">How it works</a></li>
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources -->
-                <div>
-                    <h4
-                        class="flex h-10 items-center text-[18px] font-semibold leading-none text-[#111] sm:text-[20px] lg:text-[22px]">
-                        Resources</h4>
-                    <ul class="mt-4 space-y-4 text-[14px] leading-5 text-[#111] sm:mt-5.5 sm:space-y-6">
-                        <li><a href="#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
-                        <li><a href="#diseases" class="transition hover:text-[#358A2F]">Disease Library</a></li>
-                        <li><a href="#crops" class="transition hover:text-[#358A2F]">Crop Knowledge</a></li>
-                        <li><a href="#help" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal -->
-                <div>
-                    <h4
-                        class="flex h-10 items-center text-[18px] font-semibold leading-none text-[#111] sm:text-[20px] lg:text-[22px]">
-                        Legal</h4>
-                    <ul class="mt-4 space-y-4 text-[14px] leading-5 text-[#111] sm:mt-5.5 sm:space-y-6">
-                        <li><a href="#privacy" class="transition hover:text-[#358A2F]">Privacy Policy</a></li>
-                        <li><a href="#terms" class="transition hover:text-[#358A2F]">Terms of Use</a></li>
-                        <li><a href="#cookies" class="transition hover:text-[#358A2F]">Cookie Policy</a></li>
-                        <li><a href="#disclaimer" class="transition hover:text-[#358A2F]">Disclaimer</a></li>
-                    </ul>
-                </div>
-
+              class="-mt-3 flex h-14 w-full items-center justify-center bg-[#cdeec7] pt-2 text-[14px] font-bold text-black"
+              style="clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%);">
+              Upload Image
             </div>
+            <p class="mt-3 max-w-60 text-[10px] leading-4 text-gray-700">Check leaves, stems and fruit for spots, colour
+              changes, coatings or wilting.</p>
+          </div>
+
+          <!-- step 2 -->
+          <div class="flex flex-col items-center text-center">
+            <span
+              class="relative z-10 grid h-12 w-12 place-items-center rounded-full bg-[#2f7d32] text-white shadow-md">
+              <img src="../images/arti-int.svg" alt="" class="w-6 h-6">
+            </span>
+            <div
+              class="-mt-3 flex h-14 w-full items-center justify-center bg-[#cdeec7] pt-2 text-[14px] font-bold text-black"
+              style="clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%);">
+              AI Analysis
+            </div>
+            <p class="mt-3 max-w-60 text-[10px] leading-4 text-gray-700">Check leaves, stems and fruit for spots, colour
+              changes, coatings or wilting.</p>
+          </div>
+
+          <!-- step 3 -->
+          <div class="flex flex-col items-center text-center">
+            <span
+              class="relative z-10 grid h-12 w-12 place-items-center rounded-full bg-[#2f7d32] text-white shadow-md">
+              <img src="../images/draft.svg" alt="" class="w-6 h-6">
+            </span>
+            <div
+              class="-mt-3 flex h-14 w-full items-center justify-center bg-[#cdeec7] pt-2 text-[14px] font-bold text-black"
+              style="clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%);">
+              Take Action
+            </div>
+            <p class="mt-3 max-w-60 text-[10px] leading-4 text-gray-700">Check leaves, stems and fruit for spots, colour
+              changes, coatings or wilting.</p>
+          </div>
+
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <!-- why agri vision -->
+    <section id="why" class="overflow-x-hidden bg-white py-12 font-['DM_Sans',sans-serif] lg:py-16">
 
-    <!-- Mobile menu toggle -->
-    <script src="../js/script.js"></script>
+      <div class="mx-auto max-w-300 px-3 sm:px-5">
+
+        <div class="grid items-center gap-8 md:grid-cols-[1.1fr_1fr] md:gap-15">
+
+          <!-- image -->
+          <div class="aspect-4/3 w-full overflow-hidden rounded-2xl md:aspect-18/13">
+            <img src="../images/why-agri.png" alt="Farmer scanning a plant with a phone"
+              class="h-full w-full object-cover">
+          </div>
+
+          <!-- text -->
+          <div class="min-w-0">
+
+            <div class="flex items-center gap-3">
+              <span class="text-[13px] font-medium leading-5 text-[#1E8211]">Why Agri Vision</span>
+              <div class="h-px w-12 bg-gray-700"></div>
+            </div>
+
+            <h2 class="mt-2 text-[26px] font-bold leading-[1.2] text-black sm:text-[30px]">
+              <span class="text-[#358A2F]">Prevention</span> Is Better Then Cure
+            </h2>
+
+            <ul class="mt-4 flex flex-col gap-3">
+              <li class="flex items-center gap-2.5">
+                <span
+                  class="grid h-4 w-4 shrink-0 place-items-center rounded-full border border-[#2f7d32] text-[#2f7d32]">
+                  <i class="fa-solid fa-check text-[7px]"></i>
+                </span>
+                <span class="text-[11px] leading-4 text-gray-900">Works with just battered camera, no special
+                  equipment</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span
+                  class="grid h-4 w-4 shrink-0 place-items-center rounded-full border border-[#2f7d32] text-[#2f7d32]">
+                  <i class="fa-solid fa-check text-[7px]"></i>
+                </span>
+                <span class="text-[11px] leading-4 text-gray-900">Clear, practical advice in simple language</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span
+                  class="grid h-4 w-4 shrink-0 place-items-center rounded-full border border-[#2f7d32] text-[#2f7d32]">
+                  <i class="fa-solid fa-check text-[7px]"></i>
+                </span>
+                <span class="text-[11px] leading-4 text-gray-900">Fast results, so you can act when there is still
+                  time</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span
+                  class="grid h-4 w-4 shrink-0 place-items-center rounded-full border border-[#2f7d32] text-[#2f7d32]">
+                  <i class="fa-solid fa-check text-[7px]"></i>
+                </span>
+                <span class="text-[11px] leading-4 text-gray-900">Your recent diagnoses saved and easy to revisit</span>
+              </li>
+            </ul>
+
+            <a href="../crops.html"
+              class="group relative mt-6 inline-flex h-9 items-center gap-2 overflow-hidden rounded-lg bg-[#2f6f2c] px-4 text-[11px] font-semibold text-white">
+
+              <span
+                class="absolute inset-y-0 left-0 w-[200%] -translate-x-full rounded-r-[100%] bg-[#3f8c3a] transition-transform duration-700 ease-out group-hover:translate-x-0"></span>
+
+              <span class="relative">Explore Features</span>
+              <i class="fa-solid fa-arrow-right relative text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cta banner -->
+    <section id="cta" class="overflow-x-hidden bg-white px-3 pb-16 pt-6 font-['DM_Sans',sans-serif] sm:px-5 lg:pb-20">
+
+      <div
+        class="mx-auto flex max-w-300 flex-col items-center rounded-2xl bg-[#2a7a33] px-3 py-10 text-center text-white sm:px-6 md:py-12">
+
+        <h2 class="text-[24px] font-bold leading-tight sm:text-[40px]">Found something unusual on a leaf?</h2>
+
+        <p class="mt-3 max-w-80 text-[10px] leading-4 text-white/90">Start with Agri Vision and get some
+          disease info with one snapshot from there.</p>
+
+        <a href="#"
+          class="mt-5 inline-flex h-8 items-center rounded-md bg-white px-4 text-[10px] font-semibold text-[#1f5a2b] transition hover:bg-[#eaf5c9]">
+          Try Disease Identification
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer id="contact"
+    class="relative min-h-130.5 overflow-hidden bg-[#fdfcf6] font-['DM_Sans',sans-serif] text-[#111]">
+
+    <!-- background image -->
+    <div class="absolute inset-x-0 bottom-0 z-0 h-90 lg:inset-0 lg:h-full">
+      <img src="../images/footer-img.png" alt="Green farmland background"
+        class="h-full w-full object-cover object-bottom">
+
+      <div class="absolute inset-0 lg:hidden"
+        style="background:linear-gradient(to bottom,#fdfcf6 0%,rgba(253,252,246,0.7) 35%,rgba(253,252,246,0) 75%);">
+      </div>
+
+      <div class="absolute inset-0 hidden lg:block"
+        style="background:linear-gradient(to bottom,#fdfcf6 0%,rgba(253,252,246,0.92) 30%,rgba(253,252,246,0.4) 52%,rgba(253,252,246,0) 63%);">
+      </div>
+    </div>
+
+    <div class="relative z-10 mx-auto max-w-302.5 px-3 pb-55 pt-16 sm:px-5 sm:pt-24 lg:px-8 lg:pb-40 xl:px-0">
+
+      <div
+        class="grid grid-cols-1 gap-x-6 gap-y-10 min-[400px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr] xl:grid-cols-[621px_202px_202px_1fr] xl:gap-x-0">
+
+        <!-- logo and social -->
+        <div class="col-span-1 min-[400px]:col-span-2 sm:col-span-3 lg:col-span-1">
+
+          <a href="./diseases.html" class="inline-block">
+            <img src="../images/navlogo.png" alt="Agri Vision" class="h-14 w-auto">
+          </a>
+
+          <p class="mt-5 max-w-87.5 text-[14px] leading-6 text-[#111]">
+            Empowering farmers with smart insights for healthier crops and a more sustainable future
+          </p>
+
+          <div class="mt-4 flex items-center gap-2">
+            <a href="#" aria-label="Facebook"
+              class="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[12px] text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Instagram"
+              class="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[12px] text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Google"
+              class="flex h-8 w-8 items-center justify-center rounded-[9px] border border-gray-200/90 bg-white/60 text-[12px] text-[#222] shadow-sm backdrop-blur-sm transition hover:text-[#358A2F]">
+              <i class="fa-brands fa-google"></i>
+            </a>
+          </div>
+
+          <p class="mt-6 text-[13px] leading-6 text-[#111]">© 2026 <a href="./diseases.html"
+              class="hover:text-[#8dc63f]">Agri Vision.</a></p>
+        </div>
+
+        <!-- platform -->
+        <div>
+          <h4 class="text-[18px] font-semibold leading-none text-[#111]">Platform</h4>
+          <ul class="mt-6 space-y-4 text-[13px] leading-5 text-[#111]">
+            <li><a href="./admin/index.html" class="transition hover:text-[#358A2F]">Home</a></li>
+            <li><a href="./about_us.html" class="transition hover:text-[#358A2F]">About Us</a></li>
+            <li><a href="./crops.html" class="transition hover:text-[#358A2F]">Explore Crops</a></li>
+            <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Plant Disease</a></li>
+            <li><a href="./how-it-works.html" class="transition hover:text-[#358A2F]">How it works</a></li>
+            <li><a href="./admin/index.html" class="transition hover:text-[#358A2F]">AI Plant Analysis</a></li>
+          </ul>
+        </div>
+
+        <!-- resources -->
+        <div>
+          <h4 class="text-[18px] font-semibold leading-none text-[#111]">Resources</h4>
+          <ul class="mt-6 space-y-4 text-[13px] leading-5 text-[#111]">
+            <li><a href="./index.html#analysis" class="transition hover:text-[#358A2F]">Analyse Plant</a></li>
+            <li><a href="./diseases.html" class="transition hover:text-[#358A2F]">Disease Library</a></li>
+            <li><a href="../crops.html" class="transition hover:text-[#358A2F]">Crop Knowledge</a></li>
+            <li><a href="./contact.html" class="transition hover:text-[#358A2F]">Help &amp; Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- legal -->
+        <div>
+          <h4 class="text-[18px] font-semibold leading-none text-[#111]">Legal</h4>
+          <ul class="mt-6 space-y-4 text-[13px] leading-5 text-[#111]">
+            <li><a href="#" class="transition hover:text-[#358A2F]">Privacy Policy</a></li>
+            <li><a href="#" class="transition hover:text-[#358A2F]">Terms of Use</a></li>
+            <li><a href="#" class="transition hover:text-[#358A2F]">Cookie Policy</a></li>
+            <li><a href="#" class="transition hover:text-[#358A2F]">Disclaimer</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
 </body>
+
 </html>
